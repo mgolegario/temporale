@@ -54,7 +54,6 @@
     {"name":"obj_slope_right","order":1,"path":"objects/obj_slope_right/obj_slope_right.yy",},
     {"name":"seq_presetantion","order":1,"path":"sequences/seq_presetantion/seq_presetantion.yy",},
     {"name":"rm_tile_screen","order":4,"path":"rooms/rm_tile_screen/rm_tile_screen.yy",},
-    {"name":"Object10","order":17,"path":"objects/Object10/Object10.yy",},
     {"name":"troca_sala","order":2,"path":"scripts/troca_sala/troca_sala.yy",},
   ],
 }

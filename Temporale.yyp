@@ -84,7 +84,6 @@
     {"id":{"name":"seq_presetantion","path":"sequences/seq_presetantion/seq_presetantion.yy",},},
     {"id":{"name":"spr_player_fall","path":"sprites/spr_player_fall/spr_player_fall.yy",},},
     {"id":{"name":"rm_tile_screen","path":"rooms/rm_tile_screen/rm_tile_screen.yy",},},
-    {"id":{"name":"Object10","path":"objects/Object10/Object10.yy",},},
     {"id":{"name":"troca_sala","path":"scripts/troca_sala/troca_sala.yy",},},
     {"id":{"name":"rm_pre_historia","path":"rooms/rm_pre_historia/rm_pre_historia.yy",},},
   ],
