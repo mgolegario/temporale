@@ -39,21 +39,31 @@ state= player_state_free();
 
 
 
-#region CAMERA ESTILO JUMP KING
+/*#region CAMERA ESTILO JUMP KING
 move_camera= function () {
 
 static _gridy= 1080;
-
+static _gridx= 1536
 
 var _meuy;
+var _meux;
 
 
+_meux= (x div _gridx)* _gridx;
 _meuy= (y div _gridy)* _gridy;
 
+var _camera = camera_get_view_x(view_camera[0]);
+
+if _camera <= 0 {
+_camera = 0;
+}
+
+
+var _camx = lerp(_camera, x - 1536/2, .06)
 var _camy = lerp(camera_get_view_y(view_camera[0]), _meuy, .09)
 
+show_debug_message(camera_get_view_x(view_camera[0]))
 
-camera_set_view_pos(view_camera[0], 0, _camy);
 
 }
 

@@ -32,6 +32,7 @@
     {"name":"spr_bg_menu","order":3,"path":"sprites/spr_bg_menu/spr_bg_menu.yy",},
     {"name":"obj_wall","order":2,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"seq_transicao","order":2,"path":"sequences/seq_transicao/seq_transicao.yy",},
+    {"name":"obj_camera","order":2,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"spr_arvore","order":7,"path":"sprites/spr_arvore/spr_arvore.yy",},
     {"name":"tile_primeiro","order":1,"path":"tilesets/tile_primeiro/tile_primeiro.yy",},
     {"name":"spr_fade","order":1,"path":"sprites/spr_fade/spr_fade.yy",},

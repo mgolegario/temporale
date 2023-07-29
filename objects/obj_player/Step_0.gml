@@ -30,4 +30,3 @@ if (place_meeting(x+6, y-2, obj_slope_right) && global.caiu_alto){
 
 
 
-move_camera();
