@@ -25,7 +25,7 @@ sprite_index = spr_player_run;
 image_speed = 0.5;
 move_dir = point_direction(0,0,_key_right - _key_left,0);
 move_spd = approach(move_spd, move_spd_max, acc);
-
+obj_SFX.walk_sound_loop = true;
 }else{
 
 sprite_index = spr_player_idle;
@@ -69,6 +69,8 @@ if (ground) {
 	sprite_index = spr_player_jump;	
 	alarm [0]= 10;
 
+
+
 }else if(vspd>0){
 	sprite_index = spr_player_fall;	
 
@@ -81,8 +83,7 @@ if(_key_jump and coyote_time > 0){
 	coyote_time=0;
 	vspd=0;
 	vspd-=jump_height;
-	
-
+	obj_SFX.jump_snd = true;
 }
 
 if(!_key_jump_hold && vspd <0) {
