@@ -14,6 +14,36 @@ if pos < 0 {pos= op_length-1};
 
 
 
+
+valor_ = global.master_vol *100;
+
+
+
+
+if menu_level=5 {
+
+		if keyboard_check_pressed(ord("A")){
+
+			if global.master_vol!= 1{
+
+				global.master_vol+=0.1;
+
+			} 
+		}
+
+		if  keyboard_check_pressed(ord("B")) {
+
+			if global.master_vol!= 0{
+
+				global.master_vol-=0.1;
+
+			} 
+
+		}
+		
+	};
+
+
 if (key_accept){
 	
 
@@ -41,7 +71,7 @@ switch (menu_level) {
 
 			case 0: menu_level=2; break;
 	
-			case 1: break;
+			case 1: menu_level=4;break;
 	
 			case 2: break;
 			
@@ -110,9 +140,37 @@ switch (menu_level) {
 			}
 			
 			break;
-	}
+			
+	case 4:
+	switch (pos){
+		
+			case 0: menu_level=5 ;break;
+		case 1: menu_level=1; break;
+		
+			}
+			break;
 	
+	case 5:
+	switch (pos){
+		
+			case 0: break;
+	
+	case 1: menu_level=1;break;
+		
+			}
+			
+			break;
+	
+}
+
+
 	if _sml !=menu_level {pos=0};
 	op_length = array_length(option[menu_level]);
 }
 
+
+
+option[5,0] = string(valor_) + "%";
+show_debug_message(global.master_vol)
+show_debug_message(valor_)
+show_debug_message(option[5,0])

@@ -6,6 +6,8 @@ dheight= display_get_height();
 width_choice= 0; 
 height_choice= 0;
 
+valor_= 100;
+
 
 op_border = 60;
 op_space = 100;
@@ -31,6 +33,13 @@ option[3,0] = "1280x720";
 option[3,1] = "720x480";
 option[3,2] = "640x480";
 option[3,3] = "Back & Apply";
+
+option[4,0] = "Master Volume" ;
+option[4,1] = "Back";
+
+option[5,0] = string(valor_) + "%";
+option[5,1] = "Back";
+
 
 
 op_length = 0;
