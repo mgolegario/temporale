@@ -46,6 +46,7 @@
     {"id":{"name":"spr_slope_left","path":"sprites/spr_slope_left/spr_slope_left.yy",},},
     {"id":{"name":"spr_colision_mask","path":"sprites/spr_colision_mask/spr_colision_mask.yy",},},
     {"id":{"name":"spr_slope_right","path":"sprites/spr_slope_right/spr_slope_right.yy",},},
+    {"id":{"name":"obj_iluminacao","path":"objects/obj_iluminacao/obj_iluminacao.yy",},},
     {"id":{"name":"spr_seta","path":"sprites/spr_seta/spr_seta.yy",},},
     {"id":{"name":"spr_bg_menu","path":"sprites/spr_bg_menu/spr_bg_menu.yy",},},
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},},

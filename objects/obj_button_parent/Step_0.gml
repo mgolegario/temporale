@@ -1,8 +1,8 @@
 var key_up = keyboard_check_pressed(vk_up);
 var key_down = keyboard_check_pressed(vk_down);
 var key_accept = keyboard_check_pressed(vk_enter);
-
-
+var _key_vol_up = keyboard_check(vk_left);
+var _key_vol_down = keyboard_check(vk_right);
 
 op_length = array_length(option[menu_level]);
 
@@ -14,34 +14,44 @@ if pos < 0 {pos= op_length-1};
 
 
 
+// CONTROLA O SOM PELO MENU
 
-valor_ = global.master_vol *100;
+valor_ = round(global.master_vol *100);
+
+if valor_ = -0 {
+
+valor_= valor_*-1;
+}
 
 
 
+if pos == 0 && menu_level=5 {
 
-if menu_level=5 {
-
-		if keyboard_check_pressed(ord("A")){
+		if _key_vol_up{
 
 			if global.master_vol!= 1{
 
-				global.master_vol+=0.1;
-
+				global.master_vol= lerp(global.master_vol, global.master_vol + 0.01, 0.4);
+	
+				
 			} 
 		}
 
-		if  keyboard_check_pressed(ord("B")) {
+		if  _key_vol_down{
 
 			if global.master_vol!= 0{
 
-				global.master_vol-=0.1;
+				global.master_vol= lerp(global.master_vol, global.master_vol - 0.01, 0.4);
 
 			} 
 
 		}
 		
 	};
+
+// 
+
+
 
 
 if (key_accept){
