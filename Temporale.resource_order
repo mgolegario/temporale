@@ -56,6 +56,7 @@
     {"name":"spr_player_slide","order":5,"path":"sprites/spr_player_slide/spr_player_slide.yy",},
     {"name":"obj_slope_right","order":1,"path":"objects/obj_slope_right/obj_slope_right.yy",},
     {"name":"seq_presetantion","order":1,"path":"sequences/seq_presetantion/seq_presetantion.yy",},
+    {"name":"obj_tocha","order":3,"path":"objects/obj_tocha/obj_tocha.yy",},
     {"name":"rm_tile_screen","order":4,"path":"rooms/rm_tile_screen/rm_tile_screen.yy",},
     {"name":"troca_sala","order":2,"path":"scripts/troca_sala/troca_sala.yy",},
   ],
