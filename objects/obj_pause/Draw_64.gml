@@ -3,7 +3,7 @@ var _guiw = display_get_gui_width();
 
 if (global.paused) {
 	
-	
+
 draw_set_alpha(.6);
 draw_set_color(c_black);
 draw_rectangle(0, 0, _guiw, _guih, 0);

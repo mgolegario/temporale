@@ -1,11 +1,11 @@
 var key_up = keyboard_check_pressed(vk_up);
 var key_down = keyboard_check_pressed(vk_down);
-var key_accept = keyboard_check_pressed(vk_enter);
+var key_accept = keyboard_check_pressed(vk_enter); 
+var key_accept2= device_mouse_check_button_pressed(0, mb_left);;
 var _key_vol_up = keyboard_check(vk_left);
 var _key_vol_down = keyboard_check(vk_right);
 
 op_length = array_length(option[menu_level]);
-
 
 
 pos += key_down - key_up;
@@ -25,7 +25,7 @@ valor_= valor_*-1;
 
 
 
-if pos == 0 && menu_level=5 {
+if menu_level=5 {
 
 		if _key_vol_up{
 
@@ -54,7 +54,7 @@ if pos == 0 && menu_level=5 {
 
 
 
-if (key_accept){
+if (key_accept or  key_accept2){
 	
 
 var _sml= menu_level;
@@ -181,6 +181,3 @@ switch (menu_level) {
 
 
 option[5,0] = string(valor_) + "%";
-show_debug_message(global.master_vol)
-show_debug_message(valor_)
-show_debug_message(option[5,0])

@@ -1,6 +1,8 @@
 width = 0;
 height = 0;
 
+mouse_usado= false;
+
 dwidth=display_get_width();
 dheight= display_get_height();
 width_choice= 0; 
