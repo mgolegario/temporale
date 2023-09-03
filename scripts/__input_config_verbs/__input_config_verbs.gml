@@ -25,7 +25,8 @@ return {
         special: input_binding_key(vk_shift),
         
         //No aiming verbs since we use the mouse for that (see below for aiming verb examples)
-        shoot: input_binding_mouse_button(mb_left),
+        shoot: input_binding_key(vk_up),
+		click: input_binding_mouse_button(mb_left),
         
         pause: input_binding_key(vk_escape),
     },

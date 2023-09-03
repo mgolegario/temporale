@@ -1,10 +1,3 @@
-var key_up = keyboard_check_pressed(vk_up);
-var key_down = keyboard_check_pressed(vk_down);
-var key_accept = keyboard_check_pressed(vk_enter); 
-var key_accept2= device_mouse_check_button_pressed(0, mb_left);;
-var _key_vol_up = keyboard_check(vk_left);
-var _key_vol_down = keyboard_check(vk_right);
-
 op_length = array_length(option[menu_level]);
 
 
@@ -27,7 +20,7 @@ valor_= valor_*-1;
 
 if menu_level=5 {
 
-		if input_check_pressed("left"){
+		if input_check("left"){
 
 			if global.master_vol!= 1{
 
@@ -37,7 +30,7 @@ if menu_level=5 {
 			} 
 		}
 
-		if  input_check_pressed("right"){
+		if  input_check("right"){
 
 			if global.master_vol!= 0{
 

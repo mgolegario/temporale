@@ -1,16 +1,4 @@
 function player_state_free () {
-	
-#region CONTROLES
-
-var _key_right = keyboard_check(vk_right);
-var _key_left = keyboard_check(vk_left);
-var _key_jump = keyboard_check_pressed(vk_space);
-var _key_jump_hold = keyboard_check(vk_space);
-var _key_shoot = keyboard_check_pressed(vk_up);
-
-#endregion
-
-
 
 #region MOVIMENTAÇÃO 
 
@@ -79,14 +67,14 @@ if (ground) {
 
 
 
-if(input_check("jump") and coyote_time > 0){
+if(input_check_pressed("jump") and coyote_time > 0){
 	coyote_time=0;
 	vspd=0;
 	vspd-=jump_height;
 	obj_SFX.jump_snd = true;
 }
 
-if(!input_check_pressed("jump") && vspd <0) {
+if(!input_check("jump") && vspd <0) {
 	
 	vspd = max(vspd, -jump_height /2);
 	
@@ -99,7 +87,7 @@ if(!input_check_pressed("jump") && vspd <0) {
 
 // JOGAR BOOMERANG
 
-if (input_check("up")){
+if (input_check("shoot")){
 	
 	if (!instance_exists(obj_boomerang))
 instance_create_layer(x+sign(x_scale)*25, y-50, "Instances", obj_boomerang);

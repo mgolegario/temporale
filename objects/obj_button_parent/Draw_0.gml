@@ -50,7 +50,7 @@ var _mouse_colision=point_in_rectangle(_mx,_my, x + op_border, y + op_border+op_
 		
 	}
 	
-	if keyboard_check(vk_up) or keyboard_check(vk_down){ 
+	if input_check("up") or input_check("down"){ 
 		mouse_usado= false;
 		
 	};
