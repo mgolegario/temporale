@@ -1,0 +1,1 @@
+draw_sprite(spr_mouse, 0, mouse_x, mouse_y)

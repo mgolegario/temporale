@@ -16,14 +16,14 @@ var _key_shoot = keyboard_check_pressed(vk_up);
 
 // EIXO DO X
 
-move = _key_right - _key_left != 0;
+move = input_check("right") - input_check("left") != 0;
 
 
 if (move) {
 
 sprite_index = spr_player_run;
 image_speed = 0.5;
-move_dir = point_direction(0,0,_key_right - _key_left,0);
+move_dir = point_direction(0,0,input_check("right") - input_check("left"),0);
 move_spd = approach(move_spd, move_spd_max, acc);
 obj_SFX.walk_sound_loop = true;
 }else{
@@ -79,14 +79,14 @@ if (ground) {
 
 
 
-if(_key_jump and coyote_time > 0){
+if(input_check("jump") and coyote_time > 0){
 	coyote_time=0;
 	vspd=0;
 	vspd-=jump_height;
 	obj_SFX.jump_snd = true;
 }
 
-if(!_key_jump_hold && vspd <0) {
+if(!input_check_pressed("jump") && vspd <0) {
 	
 	vspd = max(vspd, -jump_height /2);
 	
@@ -99,7 +99,7 @@ if(!_key_jump_hold && vspd <0) {
 
 // JOGAR BOOMERANG
 
-if (_key_shoot){
+if (input_check("up")){
 	
 	if (!instance_exists(obj_boomerang))
 instance_create_layer(x+sign(x_scale)*25, y-50, "Instances", obj_boomerang);

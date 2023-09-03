@@ -8,7 +8,7 @@ var _key_vol_down = keyboard_check(vk_right);
 op_length = array_length(option[menu_level]);
 
 
-pos += key_down - key_up;
+pos += input_check_pressed("down") - input_check_pressed("up");
 if pos>= op_length {pos = 0};
 if pos < 0 {pos= op_length-1};
 
@@ -27,7 +27,7 @@ valor_= valor_*-1;
 
 if menu_level=5 {
 
-		if _key_vol_up{
+		if input_check_pressed("left"){
 
 			if global.master_vol!= 1{
 
@@ -37,7 +37,7 @@ if menu_level=5 {
 			} 
 		}
 
-		if  _key_vol_down{
+		if  input_check_pressed("right"){
 
 			if global.master_vol!= 0{
 
@@ -54,7 +54,7 @@ if menu_level=5 {
 
 
 
-if (key_accept or  key_accept2){
+if (input_check_pressed("accept")){
 	
 
 var _sml= menu_level;

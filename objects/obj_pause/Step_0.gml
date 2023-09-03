@@ -1,6 +1,4 @@
-var _key_esc = keyboard_check_pressed(vk_escape);
-
-if (_key_esc) {
+if (input_check_pressed("pause")) {
 
 global.pause = !global.pause
 
