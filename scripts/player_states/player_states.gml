@@ -86,18 +86,6 @@ if(!input_check("jump") && vspd <0) {
 
 
 
-// JOGAR BOOMERANG
-
-if (input_check("shoot")){
-	
-	if (!instance_exists(obj_boomerang))
-instance_create_layer(x+sign(x_scale)*25, y-50, "Instances", obj_boomerang);
-
-}
-
-// FIM BOOMERANG
-
-
 // ESCORREGAR NA RAMPA APOS CERTA ALTURA
 
 if (sprite_index== spr_player_fall && vspd>14) {
