@@ -42,7 +42,22 @@ option[4,1] = "Back";
 option[5,0] = string(valor_) + "%";
 option[5,1] = "Back";
 
+option[6,0] = "Keyboard and Mouse";
+option[6,1] = "Controller";
+option[6,2] = "Back";
 
+
+option[7,0] = "Right:   D or ->";
+option[7,1] = "Left:    A or <-";
+option[7,2] = "Jump:    Spacebar";
+option[7,3] = "More...";
+
+
+option[8,0] = "Attack:  LMB";
+option[8,1] = "Back";
+
+option[9,0] = "algo";//+ global.right;
+option[9,1] = "Back";
 
 op_length = 0;
 menu_level = 0;

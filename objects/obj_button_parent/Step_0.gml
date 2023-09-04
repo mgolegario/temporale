@@ -76,7 +76,7 @@ switch (menu_level) {
 	
 			case 1: menu_level=4;break;
 	
-			case 2: break;
+			case 2: menu_level=6; break;
 			
 			case 3:	
 			
@@ -158,12 +158,57 @@ switch (menu_level) {
 		
 			case 0: break;
 	
-	case 1: menu_level=1;break;
+			case 1: menu_level=1;break;
+		
+			}
+			
+			break;
+			
+	case 6:
+	switch (pos){
+		
+			case 0: menu_level=7; break;
+			case 1: menu_level=9;break;
+			case 2: menu_level=1; break;
 		
 			}
 			
 			break;
 	
+	case 7:
+	switch (pos){
+		
+			case 0: break;
+			case 1: break;
+			case 2: break;
+			case 3: menu_level=8; break;
+		
+			}
+			
+			break;
+			
+	case 8:
+	switch (pos){
+		
+			case 0: break;
+			case 1: menu_level=6;break;
+		
+		
+			}
+			
+			break;
+			
+	case 9:
+	switch (pos){
+		
+			case 0: break;
+			case 1: menu_level=6;break;
+		
+		
+			}
+			
+			break;
+			
 }
 
 
