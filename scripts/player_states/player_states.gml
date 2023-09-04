@@ -14,6 +14,7 @@ image_speed = 0.5;
 move_dir = point_direction(0,0,input_check("right") - input_check("left"),0);
 move_spd = approach(move_spd, move_spd_max, acc);
 obj_SFX.walk_sound_loop = true;
+
 }else{
 
 sprite_index = spr_player_idle;

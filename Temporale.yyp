@@ -67,11 +67,11 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_abertura","folderPath":"folders/Sprites/sprites_abertura.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_colisao","folderPath":"folders/Sprites/sprites_colisao.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_inimigo","folderPath":"folders/Sprites/sprites_inimigo.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_menu","folderPath":"folders/Sprites/sprites_menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_player_rel","folderPath":"folders/Sprites/sprites_player_rel.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_inimigo","folderPath":"folders/Sprites/sprites_inimigo.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"controllerblacklist.csv","CopyToMask":-1,"filePath":"datafiles",},

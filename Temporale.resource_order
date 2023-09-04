@@ -55,10 +55,10 @@
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"sprites_abertura","order":2,"path":"folders/Sprites/sprites_abertura.yy",},
     {"name":"sprites_colisao","order":1,"path":"folders/Sprites/sprites_colisao.yy",},
+    {"name":"sprites_inimigo","order":8,"path":"folders/Sprites/sprites_inimigo.yy",},
     {"name":"sprites_menu","order":3,"path":"folders/Sprites/sprites_menu.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"sprites_inimigo","order":8,"path":"folders/Sprites/sprites_inimigo.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"input_profile_verify","order":8,"path":"scripts/input_profile_verify/input_profile_verify.yy",},
