@@ -15,7 +15,7 @@ if (place_meeting(x+sign(hspd), y, obj_wall)){
 		if(place_meeting(x+sign(hspd), y+4, obj_wall)){
 		y+=2;
 		
-		sprite_index=spr_player_slide;
+		sprite_index=spr_enemy1_idle;
 
 
 		}
@@ -23,7 +23,7 @@ if (place_meeting(x+sign(hspd), y, obj_wall)){
 }
 
 
-if (place_meeting(x+sign(hspd), y, obj_wall) or place_meeting(x+sign(move),y, obj_wall_enemy)){
+if (place_meeting(x+sign(hspd), y, obj_wall) or colisao_inimigo==true){
 
 hspd= 0;
 
