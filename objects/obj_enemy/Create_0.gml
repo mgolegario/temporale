@@ -2,8 +2,9 @@ estado= noone;
 tempo_estado= 500;
 timer_estado= 0;
 
+life=3;
+
 sat= 0;
-estou_atacando=false;
 
 vspd = 0;
 vspd_min = -14;
@@ -24,13 +25,14 @@ x_scale = 4;
 larg_visao= 200;
 alt_visao= sprite_height;
 alvo= noone;
-estou_perseguindo= false;
 
 colisao_inimigo= false;
 
-duracao_ataque=2;
+duracao_ataque=1;
 tempo_ataque=duracao_ataque;
 
+duracao_parado=4;
+tempo_parado=duracao_parado;
 
 muda_estado = function(_estado){
 
@@ -55,7 +57,7 @@ muda_estado = function(_estado){
 
 estado_parado= function(){
 	
-
+	sprite_index= spr_enemy1_idle;
 	muda_estado([estado_passeando, estado_parado]);
 	move=0;
 	
@@ -117,11 +119,11 @@ estado_persegue= function(){
 
 
 		hspd= lengthdir_x(move_spd_max, _dir);
-		vspd= lengthdir_y(move_spd_max, _dir);
+		
+
 
 		image_xscale= sign(hspd) * x_scale;
 
-		estou_perseguindo= true;
 
 
 
@@ -151,15 +153,13 @@ estado_prepara_ataque = function(){
 	}
 
 	image_speed = sat;
-	image_blend= make_color_hsv(255, sat, 255);
-
 
 	hspd=0;
 	vspd=0;
 
 	if sat>1.8 {
 		estado=estado_ataque;
-		alvo_dir=point_direction(x,y, alvo.x, alvo.y)
+		alvo_dir=point_direction(x,y, alvo.x, alvo.y);
 		sat= 0;
 		image_speed=1;
 	}
@@ -174,22 +174,33 @@ estado_ataque = function(){
 	tempo_ataque -= delta_time/1000000;
 
 	hspd= lengthdir_x(move_spd_max*2, alvo_dir);
-	vspd= lengthdir_y(move_spd_max*2, alvo_dir);
-	sprite_index=spr_enemy1_attack;
-
-
-if (tempo_ataque <=0){
-
-		estado=estado_parado;
-		sprite_index=spr_enemy1_idle;
-		estou_atacando=false;
-		estou_perseguindo=false;
-		tempo_ataque=duracao_ataque;
 
 	
+
+if image_index>4{
+if (!instance_exists(obj_enemy_hitbox)){
+
+instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_enemy_hitbox);
+
+}
 }
 
+
+sprite_index=spr_enemy1_attack;
+image_speed=1;
+hspd=0;	
+vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
+
+ if (image_index>= image_number-1){ 
 	
+estado=estado_parado;
+		sprite_index=spr_enemy1_idle;
+		tempo_ataque=duracao_ataque;
+	if (instance_exists(obj_enemy_hitbox)) instance_destroy(obj_enemy_hitbox);
+	
+ }
+
 
 }
 

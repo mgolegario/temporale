@@ -20,20 +20,23 @@ if surface_exists(sombra_surface){
 		for (var i=0; i< _num; i++) {
 			var _inst = instance_find(obj_tocha, i);
 	
-			draw_set_alpha(.9);
-			draw_circle(_inst.x, _inst.y, lerp( 104 ,104 + irandom(5), 0.3), false);
+			draw_set_alpha(1);
+			draw_rectangle(_inst.x, _inst.y, _inst.x+lerp( 500 ,500 + irandom(5), 0.3),_inst.y-lerp( 150 ,150 + irandom(5), 0.3) ,false);
 	
-			draw_set_alpha(0.5);
-			draw_circle(_inst.x, _inst.y, lerp( 127 ,127 + irandom(5), 0.3) , false);
+		
 	
 		}
 	}
 	
+	if instance_exists(obj_player){
 	draw_set_alpha(.9);
+	
 	draw_circle(obj_player.x, obj_player.y - 35, lerp( 104 ,104 + irandom(5), 0.3), false);
+
 	
 	draw_set_alpha(0.5);
 	draw_circle(obj_player.x, obj_player.y - 35, lerp( 127 ,127 + irandom(5), 0.3) , false);	
+	}
 	
 	draw_set_alpha(1);
 	

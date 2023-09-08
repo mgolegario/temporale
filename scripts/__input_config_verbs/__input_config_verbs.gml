@@ -17,12 +17,13 @@ return {
         down:  [input_binding_key(vk_down),  input_binding_key("S")],
         left:  [input_binding_key(vk_left),  input_binding_key("A")],
         right: [input_binding_key(vk_right), input_binding_key("D")],
-        jump: input_binding_key(vk_space),
+        jump:  input_binding_key(vk_space),
 		
         accept:  [input_binding_key(vk_enter), input_binding_mouse_button(mb_left)],
         cancel:  input_binding_key(vk_backspace),
         action:  input_binding_key(vk_enter),
         special: input_binding_key(vk_shift),
+		attack:  input_binding_mouse_button(mb_left),
         
         //No aiming verbs since we use the mouse for that (see below for aiming verb examples)
         shoot: input_binding_key(vk_up),
@@ -43,7 +44,8 @@ return {
         cancel:  input_binding_gamepad_button(gp_face2),
         action:  input_binding_gamepad_button(gp_face3),
         special: input_binding_gamepad_button(gp_face4),
-        
+        attack:  input_binding_gamepad_button(gp_face3),
+		
         aim_up:    input_binding_gamepad_axis(gp_axisrv, true),
         aim_down:  input_binding_gamepad_axis(gp_axisrv, false),
         aim_left:  input_binding_gamepad_axis(gp_axisrh, true),

@@ -23,9 +23,16 @@ if (place_meeting(x+sign(hspd), y, obj_wall)){
 }
 
 
-if (place_meeting(x+sign(hspd), y, obj_wall) or colisao_inimigo==true){
+if (place_meeting(x+sign(hspd), y, obj_wall) or place_meeting(x+sign(hspd),y, obj_wall_enemy)){
 
-hspd= 0;
+	tempo_parado -= delta_time/1000000;
+	
+	if tempo_parado <= 0 {
+		move=move*-1;
+		tempo_parado=duracao_parado;
+	}
+	
+	hspd= 0;
 
 break;
 

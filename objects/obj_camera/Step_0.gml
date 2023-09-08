@@ -1,6 +1,6 @@
 #region CAMERA ESTILO JUMP KING
 
-
+if instance_exists(obj_player){
 var _gridy= 1080;
 
 
@@ -18,6 +18,7 @@ y= lerp(y, _meuy, 0.09);
 
 camera_set_view_pos(view_camera[0], x, y);
 
+}
 
 #endregion
 

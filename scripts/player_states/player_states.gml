@@ -1,6 +1,5 @@
 function player_state_free () {
 
-#region MOVIMENTAÇÃO 
 
 // EIXO DO X
 
@@ -85,7 +84,6 @@ if(!input_check("jump") && vspd <0) {
 //FIM PULO
 
 
-
 // ESCORREGAR NA RAMPA APOS CERTA ALTURA
 
 if (sprite_index== spr_player_fall && vspd>14) {
@@ -99,11 +97,45 @@ if (sprite_index== spr_player_fall && vspd>14) {
 //FIM ESCORREGAR RAMPA APOS CERTA ALTURA
 
 
+if input_check_pressed("attack") and ground{
 
+image_index=0;
 
-#endregion
+state= player_state_attack;
 
 }
+
+}
+
+
+function player_state_attack(){
+
+
+if image_index>2{
+if (!instance_exists(obj_hitbox)){
+
+instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_hitbox);
+
+}
+}
+
+
+sprite_index= spr_player_attack;
+image_speed=1;
+hspd=0;	
+vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
+
+ if (image_index>= image_number-1){ 
+	
+	state=player_state_free;
+	if (instance_exists(obj_hitbox)) instance_destroy(obj_hitbox);
+	
+ }
+
+
+}
+
 
 
 function player_state_slide_right () {
@@ -112,7 +144,10 @@ move_dir = point_direction(0,0,-1,0);
 hspd = lengthdir_x(7, move_dir);
 image_xscale =abs(x_scale)*-1;
 
+
+
 }
+
 
 
 function player_state_slide_left () {
@@ -120,5 +155,6 @@ function player_state_slide_left () {
 move_dir = point_direction(0,0,1,0);
 hspd = lengthdir_x(7, move_dir);
 image_xscale =abs(x_scale);
+
 
 }

@@ -11,22 +11,16 @@ if(global.pause &&  place_meeting(x, y+1, obj_wall)) {
 global.paused= false;
 image_speed= 1;
 
+state();
 
+show_debug_message(state);
 
-if (place_meeting(x+6, y-2, obj_slope_right) && global.caiu_alto){
-		
-	state= player_state_slide_right();
-
-}else if (place_meeting(x-6, y-2, obj_slope_left) && global.caiu_alto){
-		
-	state= player_state_slide_left();
-
-
-}else {
+if life<=0 {
 	
-	state=player_state_free();
-
+	sprite_index=spr_player_attack;
+	tempo_morto-= delta_time/1000000;
+	
+	
 }
-
-
-
+	
+	show_debug_message(opacidade);
