@@ -100,6 +100,7 @@
     {"name":"__input_gamepad_guid_parse","order":1,"path":"scripts/__input_gamepad_guid_parse/__input_gamepad_guid_parse.yy",},
     {"name":"input_icons_keyboard_and_mouse","order":3,"path":"scripts/input_icons_keyboard_and_mouse/input_icons_keyboard_and_mouse.yy",},
     {"name":"__input_error","order":11,"path":"scripts/__input_error/__input_error.yy",},
+    {"name":"spr_player_death","order":9,"path":"sprites/spr_player_death/spr_player_death.yy",},
     {"name":"__input_config_keyboard","order":6,"path":"scripts/__input_config_keyboard/__input_config_keyboard.yy",},
     {"name":"input_cursor_elastic_remove","order":1,"path":"scripts/input_cursor_elastic_remove/input_cursor_elastic_remove.yy",},
     {"name":"__input_macros","order":17,"path":"scripts/__input_macros/__input_macros.yy",},

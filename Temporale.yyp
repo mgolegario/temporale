@@ -127,6 +127,7 @@
     {"id":{"name":"__input_gamepad_guid_parse","path":"scripts/__input_gamepad_guid_parse/__input_gamepad_guid_parse.yy",},},
     {"id":{"name":"input_icons_keyboard_and_mouse","path":"scripts/input_icons_keyboard_and_mouse/input_icons_keyboard_and_mouse.yy",},},
     {"id":{"name":"__input_error","path":"scripts/__input_error/__input_error.yy",},},
+    {"id":{"name":"spr_player_death","path":"sprites/spr_player_death/spr_player_death.yy",},},
     {"id":{"name":"__input_config_keyboard","path":"scripts/__input_config_keyboard/__input_config_keyboard.yy",},},
     {"id":{"name":"input_cursor_elastic_remove","path":"scripts/input_cursor_elastic_remove/input_cursor_elastic_remove.yy",},},
     {"id":{"name":"__input_macros","path":"scripts/__input_macros/__input_macros.yy",},},

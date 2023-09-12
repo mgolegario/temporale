@@ -105,9 +105,37 @@ state= player_state_attack;
 
 }
 
+
+
+if life<=0 {
+	state=player_state_dead;
+
 }
 
+function player_state_dead(){
 
+	var _morreu= false;
+	sprite_index=spr_player_death;
+	
+	if (image_index>= image_number-1)&& !_morreu{ 
+		_morreu= true;	
+	}
+ 
+	if _morreu {
+	 
+		image_speed=0; 
+		image_index=11;
+	
+	}
+ 
+	tempo_morto-= delta_time/1000000;
+	
+	
+}
+	
+
+}
+	
 function player_state_attack(){
 
 
