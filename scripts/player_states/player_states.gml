@@ -107,8 +107,24 @@ state= player_state_attack;
 
 
 
-if life<=0 {
+	if life<=0 {
 	state=player_state_dead;
+
+	}
+	
+	
+if (place_meeting(x+6, y-2, obj_slope_right) && global.caiu_alto){
+		
+	state= player_state_slide_right;
+
+}else if (place_meeting(x-6, y-2, obj_slope_left) && global.caiu_alto){
+		
+	state= player_state_slide_left;
+
+
+}
+
+
 
 }
 
@@ -130,11 +146,13 @@ function player_state_dead(){
  
 	tempo_morto-= delta_time/1000000;
 	
-	
 }
 	
 
-}
+
+
+
+
 	
 function player_state_attack(){
 
@@ -172,7 +190,11 @@ move_dir = point_direction(0,0,-1,0);
 hspd = lengthdir_x(7, move_dir);
 image_xscale =abs(x_scale)*-1;
 
+	if !(place_meeting(x+6, y-2, obj_slope_right) && global.caiu_alto){
+		
+		state=player_state_free;
 
+	}
 
 }
 
@@ -184,5 +206,10 @@ move_dir = point_direction(0,0,1,0);
 hspd = lengthdir_x(7, move_dir);
 image_xscale =abs(x_scale);
 
+if !(place_meeting(x-6, y-2, obj_slope_left) && global.caiu_alto){
+		
+		state=player_state_free;
+
+}
 
 }
