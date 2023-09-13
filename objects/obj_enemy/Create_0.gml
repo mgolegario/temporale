@@ -35,8 +35,9 @@ tempo_ataque=duracao_ataque;
 
 duracao_parado=4;
 tempo_parado=duracao_parado;
-var _morreu= false;
-var _esfumacou= false;
+
+morreu= false;
+
 	
 muda_estado = function(_estado){
 
@@ -60,28 +61,33 @@ muda_estado = function(_estado){
 estado_morto= function(){
 	
 	image_speed=1;
-	show_debug_message(_morreu)
-	show_debug_message(_esfumacou)
+
+
 	sprite_index=spr_enemy_death;
 	
-	if (image_index>= image_number-1)&& !_morreu{ 
-		_morreu= true;	
+	if (image_index>= image_number-1)&& !morreu{ 
+		morreu= true;
 	
+	}
 	
-	if _morreu sprite_index=spr_enemy_fade_out;
- 
-	if (image_index>= image_number-1)&& !_esfumacou{ 
-		_esfumacou= true;	
-		image_index=14;
-		image_speed=0;
+
+		
+	if morreu{
+		tempo_morto-= delta_time/1000000;
+		
+	}
+	
+	if tempo_morto<=0{
+		sprite_index=spr_enemy_fade_out;
+		
+	if (image_index>= image_number-1){ 
+	instance_destroy();
+		
 	}
 	}
- 
- 
 	
- if _esfumacou instance_destroy();
 	
- 
+
  
 }
 
