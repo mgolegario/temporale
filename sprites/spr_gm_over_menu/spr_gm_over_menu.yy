@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "group1",
-    "path": "folders/Sprites/group1.yy",
+    "name": "sprites_game_over",
+    "path": "folders/Sprites/sprites_game_over.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

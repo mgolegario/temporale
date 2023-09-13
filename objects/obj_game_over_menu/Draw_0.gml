@@ -1,8 +1,10 @@
 var _cor= c_white;
 
+
+
 if global.pos==1{
 _cor= c_yellow;
-}else{
+}else{ 
 	_cor= c_white;
 }
 
@@ -13,4 +15,3 @@ var _my = device_mouse_y_to_gui(0);
 
 
 mouse_collision=point_in_rectangle(_mx,_my,x,y,x+sprite_width, y+sprite_height);
-

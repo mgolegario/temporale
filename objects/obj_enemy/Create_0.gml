@@ -72,15 +72,20 @@ estado_morto= function(){
 	
 
 		
-	if morreu{
+	if morreu && tempo_morto>0{
+	
+		image_speed=0; 
+		image_index=11;
 		tempo_morto-= delta_time/1000000;
 		
 	}
 	
 	if tempo_morto<=0{
+		image_speed=1;
 		sprite_index=spr_enemy_fade_out;
 		
-	if (image_index>= image_number-1){ 
+		
+		if (image_index>= image_number-1){ 
 	instance_destroy();
 		
 	}

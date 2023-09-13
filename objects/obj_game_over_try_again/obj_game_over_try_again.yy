@@ -9,11 +9,11 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":null,"propertyId":{"name":"texto_botao","path":"objects/obj_game_over_button_parent/obj_game_over_button_parent.yy",},"value":"Tentar Novamente",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":null,"propertyId":null,"value":"Tentar Novamente",},
   ],
   "parent": {
-    "name": "group1",
-    "path": "folders/Objects/group1.yy",
+    "name": "objects_game_over",
+    "path": "folders/Objects/objects_game_over.yy",
   },
   "parentObjectId": null,
   "persistent": false,
