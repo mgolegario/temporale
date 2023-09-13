@@ -5,17 +5,17 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":null,"propertyId":{"name":"texto_botao","path":"objects/obj_game_over_button_parent/obj_game_over_button_parent.yy",},"value":"Tentar Novamente",},
+  ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "group1",
+    "path": "folders/Objects/group1.yy",
   },
-  "parentObjectId": {
-    "name": "obj_game_over_button_parent",
-    "path": "objects/obj_game_over_button_parent/obj_game_over_button_parent.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -31,7 +31,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_gm_over_menu",
+    "path": "sprites/spr_gm_over_menu/spr_gm_over_menu.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

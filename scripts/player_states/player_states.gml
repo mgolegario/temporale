@@ -146,6 +146,7 @@ function player_state_dead(){
  
 	tempo_morto-= delta_time/1000000;
 	
+
 }
 	
 
@@ -158,9 +159,9 @@ function player_state_attack(){
 
 
 if image_index>2{
-if (!instance_exists(obj_hitbox)){
+if (!instance_exists(obj_player_hitbox)){
 
-instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_hitbox);
+instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_player_hitbox);
 
 }
 }
@@ -175,7 +176,7 @@ vspd = clamp(vspd, vspd_min, vspd_max);
  if (image_index>= image_number-1){ 
 	
 	state=player_state_free;
-	if (instance_exists(obj_hitbox)) instance_destroy(obj_hitbox);
+	if (instance_exists(obj_player_hitbox)) instance_destroy(obj_player_hitbox);
 	
  }
 

@@ -13,8 +13,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "objects_player_rel",
-    "path": "folders/Objects/objects_player_rel.yy",
+    "name": "objetcs_people",
+    "path": "folders/Objects/objetcs_people.yy",
   },
   "parentObjectId": null,
   "persistent": false,

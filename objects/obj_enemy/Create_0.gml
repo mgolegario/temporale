@@ -4,6 +4,8 @@ timer_estado= 0;
 
 life=3;
 
+tempo_morto=5;
+
 sat= 0;
 
 vspd = 0;
@@ -33,7 +35,9 @@ tempo_ataque=duracao_ataque;
 
 duracao_parado=4;
 tempo_parado=duracao_parado;
-
+var _morreu= false;
+var _esfumacou= false;
+	
 muda_estado = function(_estado){
 
 	
@@ -53,9 +57,39 @@ muda_estado = function(_estado){
 }
 
 
+estado_morto= function(){
+	
+	image_speed=1;
+	show_debug_message(_morreu)
+	show_debug_message(_esfumacou)
+	sprite_index=spr_enemy_death;
+	
+	if (image_index>= image_number-1)&& !_morreu{ 
+		_morreu= true;	
+	
+	
+	if _morreu sprite_index=spr_enemy_fade_out;
+ 
+	if (image_index>= image_number-1)&& !_esfumacou{ 
+		_esfumacou= true;	
+		image_index=14;
+		image_speed=0;
+	}
+	}
+ 
+ 
+	
+ if _esfumacou instance_destroy();
+	
+ 
+ 
+}
+
+
 
 
 estado_parado= function(){
+
 	
 	sprite_index= spr_enemy1_idle;
 	muda_estado([estado_passeando, estado_parado]);
@@ -73,6 +107,7 @@ estado_parado= function(){
 
 
 estado_passeando= function() {
+
 	
 	if  move=0{
 		move = irandom(2);
@@ -111,6 +146,7 @@ hspd = lengthdir_x(move_spd, move_dir);
 
 estado_persegue= function(){
 
+
 	if (instance_exists(alvo)){
 
 		var _dir= point_direction(x, y, alvo.x, alvo.y);
@@ -144,6 +180,8 @@ estado_persegue= function(){
 }
 
 estado_prepara_ataque = function(){
+
+	
 	estou_atacando=true;
 	sprite_index= spr_enemy1_idle;
 
@@ -169,6 +207,7 @@ estado_prepara_ataque = function(){
 
 
 estado_ataque = function(){
+	
 
 
 	tempo_ataque -= delta_time/1000000;
@@ -183,7 +222,10 @@ if (!instance_exists(obj_enemy_hitbox)){
 instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_enemy_hitbox);
 
 }
+
+
 }
+
 
 
 sprite_index=spr_enemy1_attack;
