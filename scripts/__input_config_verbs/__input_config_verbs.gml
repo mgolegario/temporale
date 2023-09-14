@@ -18,6 +18,7 @@ return {
         left:  [input_binding_key(vk_left),  input_binding_key("A")],
         right: [input_binding_key(vk_right), input_binding_key("D")],
         jump:  input_binding_key(vk_space),
+		dialogo: input_binding_key("F"),
 		
         accept:  [input_binding_key(vk_enter), input_binding_mouse_button(mb_left)],
         cancel:  input_binding_key(vk_backspace),
@@ -39,7 +40,8 @@ return {
         left:  [input_binding_gamepad_axis(gp_axislh, true),  input_binding_gamepad_button(gp_padl)],
         right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
         jump: input_binding_gamepad_button(gp_face1),
-		
+		dialogo: input_binding_gamepad_button(gp_face4),
+			
         accept:  input_binding_gamepad_button(gp_face1),
         cancel:  input_binding_gamepad_button(gp_face2),
         action:  input_binding_gamepad_button(gp_face3),

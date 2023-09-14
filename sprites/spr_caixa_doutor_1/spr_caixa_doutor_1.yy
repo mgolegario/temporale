@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Sprite41",
-  "bbox_bottom": 0,
+  "name": "spr_caixa_doutor_1",
+  "bbox_bottom": 386,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 1457,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c24533ff-1ba3-4127-b441-9c398c75b72c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"03fead10-6eb6-4fad-a1a8-b6fdada0463b",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 387,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a7fd2223-c09d-4f48-ad69-a17589a1d0dd","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"012d1539-88aa-4bf5-838b-2efd5682f515","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Sprite41",
+    "name": "spr_caixa_doutor_1",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c24533ff-1ba3-4127-b441-9c398c75b72c","path":"sprites/Sprite41/Sprite41.yy",},},},"Disabled":false,"id":"fb4092da-aa2e-46a8-b50e-7505bc00962e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"03fead10-6eb6-4fad-a1a8-b6fdada0463b","path":"sprites/spr_caixa_doutor_1/spr_caixa_doutor_1.yy",},},},"Disabled":false,"id":"ca448c26-1853-40c3-8706-bed30967bd40","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 1458,
 }

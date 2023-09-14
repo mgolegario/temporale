@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Sprite40",
-  "bbox_bottom": 0,
+  "name": "spr_caixa_player_2",
+  "bbox_bottom": 386,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 1457,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"66b8c313-da94-47f2-b174-0f9c3d62ecf1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"56bc3dde-08c4-4265-991e-9e1354bcabda",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 387,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4693ed30-c1ba-4a2f-9db1-2c1261322139","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"204f8624-072b-4cfd-bfe0-0f4ec81cdb70","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Sprite40",
+    "name": "spr_caixa_player_2",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"66b8c313-da94-47f2-b174-0f9c3d62ecf1","path":"sprites/Sprite40/Sprite40.yy",},},},"Disabled":false,"id":"bfacf038-35cd-4ceb-91f7-d18f171d3b18","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"56bc3dde-08c4-4265-991e-9e1354bcabda","path":"sprites/spr_caixa_player_2/spr_caixa_player_2.yy",},},},"Disabled":false,"id":"06e2e128-f49f-4349-acf2-0f6260204052","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 1458,
 }

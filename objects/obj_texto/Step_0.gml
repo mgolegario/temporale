@@ -1,7 +1,14 @@
-if (indice <= string_length(texto)){
+if texto_por_fala!= texto[fala]{
+indice=1;
+texto_por_fala=texto[fala];
+if troca_balao=0 troca_balao=1 else troca_balao=0;
+}
+
+if (indice <= string_length(texto[fala])){
+	
 	
 	if indice==ceil(indice){
-		var _char = string_char_at(texto, indice);
+		var _char = string_char_at(texto[fala], indice);
 		if _char!=" "{
 			obj_SFX.text_snd=true;
 		}
@@ -17,4 +24,22 @@ if (indice <= string_length(texto)){
 }
 
 
-if input_check_pressed("attack") indice=string_length(texto);
+ 
+if input_check_pressed("attack") && foi_falado==false{ 
+	indice=string_length(texto[fala]);
+	alarm[0]=5;
+}
+
+if indice=string_length(texto[fala]) alarm[0]=5;
+
+show_debug_message(foi_falado)
+
+if input_check_pressed("attack") && foi_falado==true {
+	
+	fala++;
+	foi_falado=false;
+	if fala>= array_length(texto){
+	instance_destroy();
+	}
+	
+	}
