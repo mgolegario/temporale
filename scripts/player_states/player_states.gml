@@ -100,7 +100,8 @@ if (sprite_index== spr_player_fall && vspd>14) {
 if input_check_pressed("attack") and ground{
 
 image_index=0;
-
+move_spd=0;
+hspd=0;
 state= player_state_attack;
 
 }
@@ -161,7 +162,7 @@ function player_state_attack(){
 if image_index>2{
 if (!instance_exists(obj_player_hitbox)){
 
-instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_player_hitbox);
+instance_create_layer(x+(52*(image_xscale/4)),y,layer,obj_player_hitbox);
 
 }
 }
@@ -169,7 +170,7 @@ instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_player_hitbox);
 
 sprite_index= spr_player_attack;
 image_speed=1;
-hspd=0;	
+
 vspd+=grv;
 vspd = clamp(vspd, vspd_min, vspd_max);
 
