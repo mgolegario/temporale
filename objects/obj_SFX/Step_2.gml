@@ -45,4 +45,15 @@ if walk_sound_loop == false && audio_is_playing(walk_sound_loop_inst){
 
 walk_sound_loop= false;
 
+//som texto
+
+if text_snd == true {
+
+
+	var _snd = audio_play_sound(snd_text, 8, false, , , global.pitch);
+	audio_sound_gain( _snd, _sfx_vol ,0)
+	text_snd = false;
+
+}
+
 
