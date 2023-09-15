@@ -196,17 +196,16 @@ estado_prepara_ataque = function(){
 	estou_atacando=true;
 	sprite_index= spr_enemy1_idle;
 
-	if sat<2{
+	if sat<=1{
 	
 		sat+= (delta_time/2000000);
 	}
 
-	image_speed = sat;
 
 	hspd=0;
 	vspd=0;
 
-	if sat>1.8 {
+	if sat>=1 {
 		estado=estado_ataque;
 		alvo_dir=point_direction(x,y, alvo.x, alvo.y);
 		sat= 0;
@@ -219,7 +218,7 @@ estado_prepara_ataque = function(){
 
 estado_ataque = function(){
 	
-
+image_speed=1;
 
 	tempo_ataque -= delta_time/1000000;
 
@@ -240,7 +239,7 @@ instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_enemy_hitbox);
 
 
 sprite_index=spr_enemy1_attack;
-image_speed=1;
+
 hspd=0;	
 vspd+=grv;
 vspd = clamp(vspd, vspd_min, vspd_max);
@@ -261,7 +260,7 @@ estado=estado_parado;
 campo_visao = function (_largura, _altura, _xscale){
 
 	var _x1, _x2, _y1, _y2;
-	_x1= x;
+	_x1= x- (100* image_xscale/4);
 	_y1= y + _altura/2 - sprite_height /2;
 	_x2= _x1 + _largura * image_xscale/4;
 	_y2= _y1 - _altura;

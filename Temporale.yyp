@@ -263,6 +263,7 @@
     {"id":{"name":"input_join_is_finished","path":"scripts/input_join_is_finished/input_join_is_finished.yy",},},
     {"id":{"name":"input_cursor_coord_space_set","path":"scripts/input_cursor_coord_space_set/input_cursor_coord_space_set.yy",},},
     {"id":{"name":"input_source_share","path":"scripts/input_source_share/input_source_share.yy",},},
+    {"id":{"name":"spr_exclamacao","path":"sprites/spr_exclamacao/spr_exclamacao.yy",},},
     {"id":{"name":"input_verb_get_group","path":"scripts/input_verb_get_group/input_verb_get_group.yy",},},
     {"id":{"name":"input_binding_is_valid","path":"scripts/input_binding_is_valid/input_binding_is_valid.yy",},},
     {"id":{"name":"input_axis_threshold_get","path":"scripts/input_axis_threshold_get/input_axis_threshold_get.yy",},},

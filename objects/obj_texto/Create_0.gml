@@ -7,7 +7,7 @@ troca_balao=0;
 indice=1;
 vel_txt=0.1;
 
-vel_lenta= 0.4;
+vel_lenta= 0.3;
 vel_txt= vel_lenta;
 
 caixa[0,0]= noone;

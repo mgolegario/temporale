@@ -5,7 +5,7 @@ if distance_to_object(obj_player) <= 35{
 	instance_create_layer(x,y, "dialogo",obj_texto);
 
 	with obj_texto{
-		texto=["oi teste oi teste oi teste oi teste",
+		texto=["Olhe bem meu filho, eu já tenho uma idade bem avançada, então nunca é meio dificil cair numa dessa",
 		"tudo bem tudo bem tudo bem tudo bem tudo bem",
 		"flw flw flw flw flw flw flw flw"];
 
