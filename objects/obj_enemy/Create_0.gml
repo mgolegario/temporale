@@ -1,7 +1,7 @@
 estado= noone;
 tempo_estado= 500;
 timer_estado= 0;
-
+exclamacao_altura=1;
 life=3;
 
 tempo_morto=5;
@@ -138,12 +138,12 @@ hspd = lengthdir_x(move_spd, move_dir);
 	
 
 	if (hspd!= 0) {
-		image_xscale = sign(hspd)*x_scale;
+		x_scale = sign(hspd)*4;
 	
 
 	}
 	
-	alvo= campo_visao(larg_visao, alt_visao, image_xscale/4)
+	alvo= campo_visao(larg_visao, alt_visao, x_scale/4)
 	
 	if (alvo) {
 	estado= estado_persegue
@@ -162,14 +162,14 @@ estado_persegue= function(){
 
 		var _dir= point_direction(x, y, alvo.x, alvo.y);
 
-		sprite_index= spr_enemy1_run;
+		x_scale= spr_enemy1_run;
 
 
 		hspd= lengthdir_x(move_spd_max, _dir);
 		
 
 
-		image_xscale= sign(hspd) * x_scale;
+		x_scale= sign(hspd) * 4;
 
 
 
@@ -179,7 +179,7 @@ estado_persegue= function(){
 		if (_dist< larg_visao/4) estado= estado_prepara_ataque;
 
 
-		if (_dist>larg_visao) alvo=noone;
+		if (_dist>larg_visao/1.5) alvo=noone;
 
 
 	}else{
@@ -227,7 +227,7 @@ image_speed=1;
 if image_index>4{
 if (!instance_exists(obj_enemy_hitbox)){
 
-instance_create_layer(x+(70*(image_xscale/4)),y,layer,obj_enemy_hitbox);
+instance_create_layer(x+(70*(x_scale/4)),y,layer,obj_enemy_hitbox);
 
 }
 
@@ -258,9 +258,9 @@ estado=estado_parado;
 campo_visao = function (_largura, _altura, _xscale){
 
 	var _x1, _x2, _y1, _y2;
-	_x1= x- (200* image_xscale/4);
+	_x1= x- (200* x_scale/4);
 	_y1= y + _altura/2 - sprite_height /2;
-	_x2= _x1 + _largura * image_xscale/4;
+	_x2= _x1 + _largura * x_scale/4;
 	_y2= _y1 - _altura;
 
 
@@ -271,6 +271,7 @@ campo_visao = function (_largura, _altura, _xscale){
 	return _alvo;
 
 }
+
 
 
 estado= estado_parado;

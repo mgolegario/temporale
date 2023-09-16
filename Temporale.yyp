@@ -377,7 +377,7 @@
     {"id":{"name":"input_source_clear","path":"scripts/input_source_clear/input_source_clear.yy",},},
     {"id":{"name":"__input_key_is_ignored","path":"scripts/__input_key_is_ignored/__input_key_is_ignored.yy",},},
     {"id":{"name":"obj_game_over_overlay","path":"objects/obj_game_over_overlay/obj_game_over_overlay.yy",},},
-    {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
+    {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"input_binding_get","path":"scripts/input_binding_get/input_binding_get.yy",},},
     {"id":{"name":"input_system_reset","path":"scripts/input_system_reset/input_system_reset.yy",},},
     {"id":{"name":"obj_game_over_menu","path":"objects/obj_game_over_menu/obj_game_over_menu.yy",},},
