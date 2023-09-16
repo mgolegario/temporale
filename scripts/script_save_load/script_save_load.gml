@@ -59,6 +59,7 @@ for (var i=0; i<_menu_num;i++){
 }
 	
 	global.menu=_room_struct_menu.menu_data;
+	
 #endregion	
 	
 	
@@ -95,7 +96,7 @@ function load_room(){
 	
 	// checar se room_struct é uma struct
 	
-	if !is_struct(_room_struct){exit;};
+	if is_struct(_room_struct)and !is_struct(_room_struct_menu){
 	
 	
 	if instance_exists(obj_enemy){instance_destroy(obj_enemy); };
@@ -115,12 +116,12 @@ function load_room(){
 	
 	}
 
-if !is_struct(_room_struct_menu){exit;};
+	}else if  !is_struct(_room_struct)and is_struct(_room_struct_menu){
 
 for (var i=0; i<_room_struct_menu.menu_num; i++){
 	
 
-			with obj_menu{
+		with obj_menu{
 		global.master_vol= _room_struct_menu.menu_data[i].master_vol;
 		height_choice= _room_struct_menu.menu_data[i].height_choice;
 		width_choice= _room_struct_menu.menu_data[i].width_choice;
@@ -128,7 +129,9 @@ for (var i=0; i<_room_struct_menu.menu_num; i++){
 			}	
 }
 
-
+	}else{
+	exit;
+	}
 }
 	
 function save_game(_filenum=0){
@@ -145,8 +148,8 @@ var _obj_menu= instance_exists(obj_menu);
 	if _obj_player==true global.stat_data.save_y = obj_player.y;
 	global.stat_data.save_rm = room_get_name(room);
 	
-	global.stat_data.enemy=global.enemy;
-	global.stat_data.menu= global.menu;
+	global.stat_data.enemy=global.level_data.level_1;
+	global.stat_data.menu= global.level_data.level_menu;
 	
 	array_push(_save_array, global.stat_data);
 	
@@ -179,8 +182,8 @@ function load_game(_filenum){
 	global.stat_data= array_get(_load_array, 0);
 	global.level_data= array_get(_load_array, 1);
 	
-	global.level_data.level_1.enemy_data=global.stat_data.enemy;
-	global.level_data.level_menu.menu_data=global.stat_data.menu;
+	global.level_data.level_1=global.stat_data.enemy;
+	global.level_data.level_menu=global.stat_data.menu;
 	
 	
 	var _load_room= asset_get_index(global.stat_data.save_rm);
