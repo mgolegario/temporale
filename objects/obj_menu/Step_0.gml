@@ -57,7 +57,7 @@ switch (menu_level) {
 	case 0:
 		switch (pos){
 
-			case 0: room_goto(rm_pre_historia); break;
+			case 0: room_goto(rm_cutscene_inicial); break;
 	
 			case 1:  break;
 	
