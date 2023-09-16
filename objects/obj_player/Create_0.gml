@@ -4,7 +4,7 @@ vspd_min = -14;
 vspd_max = 35;
 grv = 0.5;
 
-life=1;
+life=4;
 
 opacidade=0;
 

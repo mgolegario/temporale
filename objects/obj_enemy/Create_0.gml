@@ -17,14 +17,14 @@ hspd=0;
 move=0;
 move_dir = 0;
 move_spd = 0;
-move_spd_max= 5.0;
+move_spd_max= 5.5;
 acc = 0.45;
 dcc = 0.45;
 
 y_scale = 4;
 x_scale = 4;
 
-larg_visao= 200;
+larg_visao= 400;
 alt_visao= sprite_height;
 alvo= noone;
 
@@ -158,7 +158,7 @@ hspd = lengthdir_x(move_spd, move_dir);
 estado_persegue= function(){
 
 
-	if (instance_exists(alvo)){
+	if (instance_exists(alvo) and obj_player.state!=player_state_dead){
 
 		var _dir= point_direction(x, y, alvo.x, alvo.y);
 
@@ -176,10 +176,10 @@ estado_persegue= function(){
 
 		var _dist= point_distance(x, y, alvo.x, alvo.y); 
 
-		if (_dist< larg_visao/2) estado= estado_prepara_ataque;
+		if (_dist< larg_visao/4) estado= estado_prepara_ataque;
 
 
-		if (_dist>larg_visao*2) alvo=noone;
+		if (_dist>larg_visao) alvo=noone;
 
 
 	}else{
@@ -205,7 +205,7 @@ estado_prepara_ataque = function(){
 	hspd=0;
 	vspd=0;
 
-	if sat>=1 {
+	if sat>=0.3 {
 		estado=estado_ataque;
 		alvo_dir=point_direction(x,y, alvo.x, alvo.y);
 		sat= 0;
@@ -221,8 +221,6 @@ estado_ataque = function(){
 image_speed=1;
 
 	tempo_ataque -= delta_time/1000000;
-
-	hspd= lengthdir_x(move_spd_max*2, alvo_dir);
 
 	
 
@@ -260,7 +258,7 @@ estado=estado_parado;
 campo_visao = function (_largura, _altura, _xscale){
 
 	var _x1, _x2, _y1, _y2;
-	_x1= x- (100* image_xscale/4);
+	_x1= x- (200* image_xscale/4);
 	_y1= y + _altura/2 - sprite_height /2;
 	_x2= _x1 + _largura * image_xscale/4;
 	_y2= _y1 - _altura;

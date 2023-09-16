@@ -110,6 +110,9 @@ state= player_state_attack;
 
 	if life<=0 {
 	state=player_state_dead;
+	move_spd=0;
+	hspd=0;
+
 
 	}
 	
@@ -130,7 +133,9 @@ if (place_meeting(x+6, y-2, obj_slope_right) && global.caiu_alto){
 }
 
 function player_state_dead(){
-
+	
+	vspd+=grv;
+	vspd = clamp(vspd, vspd_min, vspd_max);
 	var _morreu= false;
 	sprite_index=spr_player_death;
 	
