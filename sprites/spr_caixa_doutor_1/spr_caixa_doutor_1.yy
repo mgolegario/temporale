@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"03fead10-6eb6-4fad-a1a8-b6fdada0463b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2f30f603-d549-4c32-8862-da4558ab0c37",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 387,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"012d1539-88aa-4bf5-838b-2efd5682f515","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d3440ccf-a7de-4c59-9f6c-a60e9b9197ee","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"03fead10-6eb6-4fad-a1a8-b6fdada0463b","path":"sprites/spr_caixa_doutor_1/spr_caixa_doutor_1.yy",},},},"Disabled":false,"id":"ca448c26-1853-40c3-8706-bed30967bd40","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2f30f603-d549-4c32-8862-da4558ab0c37","path":"sprites/spr_caixa_doutor_1/spr_caixa_doutor_1.yy",},},},"Disabled":false,"id":"25982c71-35b3-4290-a80b-7e18b9b2b6dc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
