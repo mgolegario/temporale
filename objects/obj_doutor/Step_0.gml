@@ -1,6 +1,6 @@
 layer_create(-200,"dialogo");
 
-if distance_to_object(obj_player) <= 35{
+if obj_player.state!=player_state_cutscene1 and distance_to_object(obj_player) <= 35{
 	if input_check_pressed("dialogo"){
 	instance_create_layer(x,y, "dialogo",obj_texto);
 

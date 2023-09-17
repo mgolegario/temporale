@@ -32,13 +32,13 @@ if input_check_pressed("attack") && foi_falado==false{
 
 if indice=string_length(texto[fala]) alarm[0]=5;
 
-show_debug_message(foi_falado)
 
 if input_check_pressed("attack") && foi_falado==true {
 	
 	fala++;
 	foi_falado=false;
 	if fala>= array_length(texto){
+	obj_player.dialogo_finalizado_cut1=true;
 	instance_destroy();
 	}
 	

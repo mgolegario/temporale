@@ -118,6 +118,7 @@
     {"id":{"name":"input_vibrate_get_strength","path":"scripts/input_vibrate_get_strength/input_vibrate_get_strength.yy",},},
     {"id":{"name":"input_trigger_effect_weapon","path":"scripts/input_trigger_effect_weapon/input_trigger_effect_weapon.yy",},},
     {"id":{"name":"input_player_swap","path":"scripts/input_player_swap/input_player_swap.yy",},},
+    {"id":{"name":"spr_player_inicio_cutscene","path":"sprites/spr_player_inicio_cutscene/spr_player_inicio_cutscene.yy",},},
     {"id":{"name":"spr_seta_dialogo","path":"sprites/spr_seta_dialogo/spr_seta_dialogo.yy",},},
     {"id":{"name":"__input_config_external_data","path":"scripts/__input_config_external_data/__input_config_external_data.yy",},},
     {"id":{"name":"input_distance","path":"scripts/input_distance/input_distance.yy",},},

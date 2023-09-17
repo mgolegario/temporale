@@ -93,6 +93,7 @@
     {"name":"input_vibrate_get_strength","order":4,"path":"scripts/input_vibrate_get_strength/input_vibrate_get_strength.yy",},
     {"name":"input_trigger_effect_weapon","order":8,"path":"scripts/input_trigger_effect_weapon/input_trigger_effect_weapon.yy",},
     {"name":"input_player_swap","order":11,"path":"scripts/input_player_swap/input_player_swap.yy",},
+    {"name":"spr_player_inicio_cutscene","order":12,"path":"sprites/spr_player_inicio_cutscene/spr_player_inicio_cutscene.yy",},
     {"name":"spr_seta_dialogo","order":18,"path":"sprites/spr_seta_dialogo/spr_seta_dialogo.yy",},
     {"name":"__input_config_external_data","order":1,"path":"scripts/__input_config_external_data/__input_config_external_data.yy",},
     {"name":"input_distance","order":1,"path":"scripts/input_distance/input_distance.yy",},

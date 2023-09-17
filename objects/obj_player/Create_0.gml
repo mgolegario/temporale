@@ -30,10 +30,12 @@ global.pulou = 0;
 global.caiu = 0;
 global.caiu_alto = false;
 
-
+levantou=false;
+parou=false;
+dialogo_finalizado_cut1=false;
 tempo_morto= 2;
 
-state = player_state_free;
+state = player_state_cutscene1;
 
 
 
