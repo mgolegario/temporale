@@ -34,6 +34,8 @@ levantou=false;
 parou=false;
 dialogo_finalizado_cut1=false;
 tempo_morto= 2;
+comecou_diag= false;
+
 
 state = player_state_cutscene1;
 

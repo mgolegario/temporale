@@ -238,31 +238,32 @@ if levantou==false and (image_index>= image_number-1){
     levantou=true;
  }
 
-
+ 
  if !parou and distance_to_object(obj_doutor)<=70{
 	hspd=0;
  	image_speed=0.5;
 	sprite_index= spr_player_idle;
 	parou=true;
-	
+
  }
 
 
 
- 
- if !dialogo_finalizado_cut1 and input_check_pressed("dialogo") {
 
+ 
+ if !comecou_diag and !dialogo_finalizado_cut1 and input_check_pressed("dialogo") {
+	comecou_diag=true;
 	layer_create(-200,"dialogo");
 	instance_create_layer(x,y, "dialogo",obj_texto);
 
 	with obj_texto{
-		texto=["Olhe bem meu filho, eu já tenho uma idade bem avançada, então nunca é meio dificil cair numa dessa",
-		"tudo bem tudo bem tudo bem tudo bem tudo bem",
-		"flw flw flw flw flw flw flw flw"];
-
-		caixa[0,0]=caixa_doutor[0,0];
-		caixa[0,1]=caixa_doutor[0,1];
 	
+	
+		texto=["Olá, tudo bem aí?","Sim, tudo meu filho"];
+	
+		
+		
+		
 	}
 
  }
@@ -274,7 +275,7 @@ if levantou==false and (image_index>= image_number-1){
   if dialogo_finalizado_cut1==true{
  
 	state= player_state_free;
- 
+	comecou_diag=false;
  
  }
  

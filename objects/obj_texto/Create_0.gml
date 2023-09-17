@@ -10,13 +10,9 @@ vel_txt=0.1;
 vel_lenta= 0.3;
 vel_txt= vel_lenta;
 
-caixa[0,0]= noone;
-caixa[0,1]= noone;
 
-caixa_player[0,0]= spr_caixa_player_1;
-caixa_player[0,1]= spr_caixa_player_2;
+caixa[0,0]= spr_caixa_player_1;
+caixa[0,1]= spr_caixa_player_2;
+caixa[0,2]= spr_caixa_doutor_1;
+caixa[0,3]= spr_caixa_doutor_2;
 
-caixa_doutor[0,0]= spr_caixa_doutor_1;
-caixa_doutor[0,1]= spr_caixa_doutor_2;
-
-caixa=caixa_player[0,1];

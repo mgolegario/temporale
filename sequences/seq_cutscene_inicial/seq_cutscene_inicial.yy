@@ -14,10 +14,7 @@
     "resourceVersion": "1.0",
     "Keyframes": [],
   },
-  "eventStubScript": {
-    "name": "seq_cutscene_inicial_Events319",
-    "path": "scripts/seq_cutscene_inicial_Events319/seq_cutscene_inicial_Events319.yy",
-  },
+  "eventStubScript": null,
   "eventToFunction": {},
   "length": 2900.0,
   "lockOrigin": false,

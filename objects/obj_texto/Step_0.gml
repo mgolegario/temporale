@@ -1,9 +1,9 @@
 if texto_por_fala!= texto[fala]{
 indice=1;
 texto_por_fala=texto[fala];
-if troca_balao=0 troca_balao=1 else troca_balao=0;
+//if troca_balao=0 troca_balao=1 else troca_balao=0;
 }
-
+show_debug_message(troca_balao);
 if (indice <= string_length(texto[fala])){
 	
 	
@@ -32,6 +32,12 @@ if input_check_pressed("attack") && foi_falado==false{
 
 if indice=string_length(texto[fala]) alarm[0]=5;
 
+
+if obj_player.comecou_diag{
+if fala=0 {troca_balao=0;};
+if fala=1 {troca_balao=2;};
+
+}
 
 if input_check_pressed("attack") && foi_falado==true {
 	
