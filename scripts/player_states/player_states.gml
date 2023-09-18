@@ -221,6 +221,7 @@ if !(place_meeting(x-6, y-2, obj_slope_left) && global.caiu_alto){
 
 }
 
+
 function player_state_cutscene1 (){
 
 
@@ -259,10 +260,14 @@ if levantou==false and (image_index>= image_number-1){
 	with obj_texto{
 	
 	
-		texto=["Olá, tudo bem aí?","Sim, tudo meu filho"];
+		texto=["Olá, tudo bem aí?","Sim, tudo meu filho. Tirando o fato que você acabou de nós levar pra outra dimensão.",
+		"O que? Repete.", "É exatamente o que você ouviu, outra dimensão. Não sei como você fez isso, mas foi jogando algo pela minha janela.",
+		"Ah. É que eu estava dormindo em uma árvore, quando do nada caiu uma maçã na minha cabeça. Aí eu joguei ela fora.", "Então foi uma maçã o objeto voador não indentificado que quebrou minha janela de 1000 reais.",
+		"Bom, esse é o menor dos problemas. Temos que dar um jeito de dar o fora daqui.","Mas o que exatamente eu 'quebrei'?",
+		"Você quebrou uma máquina do tempo, projeto de 15 anos meu. Aliás, qual é o seu nome?","Meu nome é Adler.","Continuando, esse projeto era uma máquina do tempo. Eu para ser realista não sabia que ela funcionava, mas é o que é. Descobrimos da pior forma.",
+		"Tá, mas como fazemos para sair daqui?","Tentando reconstruir ela, tenho certeza que as partes estão em algum lugar por aí.","Está esperando o que? Levanta e vamos procurar!","HAHAHAHAHAHAHA! Essa foi boa, olha bem para a minha cara Adler, você acha que eu tenho idade? Você terá que ir sozinho nessa.", 
+		"Tome isto, essa espada vai lhe ajudar no seu caminho. Aparentemente tem uns caras maus indo atrás de você. E boa sorte, vou tirar uma soneca agora.","Puff..."];
 	
-		
-		
 		
 	}
 

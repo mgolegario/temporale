@@ -3,7 +3,7 @@ indice=1;
 texto_por_fala=texto[fala];
 //if troca_balao=0 troca_balao=1 else troca_balao=0;
 }
-show_debug_message(troca_balao);
+
 if (indice <= string_length(texto[fala])){
 	
 	
@@ -23,7 +23,11 @@ if (indice <= string_length(texto[fala])){
 
 }
 
-
+if troca_balao=2 or  troca_balao=3 {
+global.pitch=0.98;
+}else{
+global.pitch=1;
+}
  
 if input_check_pressed("attack") && foi_falado==false{ 
 	indice=string_length(texto[fala]);
@@ -34,8 +38,24 @@ if indice=string_length(texto[fala]) alarm[0]=5;
 
 
 if obj_player.comecou_diag{
+	
 if fala=0 {troca_balao=0;};
 if fala=1 {troca_balao=2;};
+if fala=2 {troca_balao=1;};
+if fala=3 {troca_balao=3;};
+if fala=4 {troca_balao=0;};
+if fala=5 {troca_balao=2;};
+if fala=6 {troca_balao=3;};
+if fala=7 {troca_balao=0;};
+if fala=8 {troca_balao=3;};
+if fala=9 {troca_balao=1;};
+if fala=10 {troca_balao=2;};
+if fala=11 {troca_balao=1;};
+if fala=12 {troca_balao=2;};
+if fala=13 {troca_balao=0;};
+if fala=14 {troca_balao=3;};
+if fala=15 {troca_balao=2;};
+if fala=16 {troca_balao=0;};
 
 }
 
@@ -49,3 +69,4 @@ if input_check_pressed("attack") && foi_falado==true {
 	}
 	
 	}
+	show_debug_message(global.pitch)
