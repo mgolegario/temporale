@@ -226,7 +226,10 @@ function player_state_cutscene1 (){
 
 
 
-if levantou==false {sprite_index=spr_player_inicio_cutscene; };
+show_debug_message(levantou)
+
+if opacidade<=0{
+
 image_speed=0.5;
 
 if levantou==false and (image_index>= image_number-1){ 
@@ -283,5 +286,9 @@ if levantou==false and (image_index>= image_number-1){
 	comecou_diag=false;
  
  }
- 
+}else{
+image_speed=0;
+sprite_index=spr_player_inicio_cutscene;
+}
+
 }

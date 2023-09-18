@@ -6,7 +6,8 @@ grv = 0.5;
 
 life=4;
 
-opacidade=0;
+opacidade=1;
+cutscene_start=false;
 
 
 oi=0;
