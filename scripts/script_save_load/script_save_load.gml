@@ -215,10 +215,10 @@ var _obj_menu= instance_exists(obj_menu);
 	save_room();
 
 
-	global.stat_menu.menu= global.level_data.level_menu;
-	
-	array_push(_save_array, global.stat_data);
-	
+	global.menu_data.menu= global.level_data.level_menu;
+	global.stat_data.save_rm = room_get_name(room);
+		
+	array_push(_save_array, global.menu_data);
 	array_push(_save_array, global.level_data);
 	
 	var _filename="savemenu"+ string(_filenum) +".sav";
@@ -243,12 +243,12 @@ function load_menu(_filenum){
 	buffer_delete(_buffer);
 	
 	var _load_array = json_parse(_json);
+	var _load_room= asset_get_index(global.stat_data.save_rm);
 	
-	
-	global.stat_menu= array_get(_load_array, 0);
+	global.menu_data= array_get(_load_array, 0);
 	global.level_data= array_get(_load_array, 1);
 	
-	global.level_data.level_menu=global.stat_menu.menu;
+	global.level_data.level_menu=global.menu_data.menu;
 	
 	
 	obj_save_load.skip_room_saving=true;

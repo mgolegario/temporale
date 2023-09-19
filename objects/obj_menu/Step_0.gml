@@ -59,11 +59,10 @@ switch (menu_level) {
 
 			case 0: menu_level=10; break;
 	
-			case 1:  menu_level=11;break;
+			case 1:  menu_level=1;break;
 	
-			case 2: menu_level=1; break;
+			case 2:  game_end(); break;
 			
-			case 3: game_end(); break;
 
 			} 
 
