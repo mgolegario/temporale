@@ -1,17 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_mouse",
+  "name": "obj_cutscene_finalizada",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "objects_menu",
-    "path": "folders/Objects/objects_menu.yy",
+    "name": "objects_player_rel",
+    "path": "folders/Objects/objects_player_rel.yy",
   },
   "parentObjectId": null,
   "persistent": true,
@@ -29,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_mouse",
-    "path": "sprites/spr_mouse/spr_mouse.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

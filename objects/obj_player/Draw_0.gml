@@ -1,6 +1,6 @@
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, y_scale, 0, c_white, 1);
 
-
+if !global.dialogo_ja_feito{
 if opacidade>0{
 	
 	layer_create(-100,"transicao");
@@ -12,12 +12,11 @@ if opacidade>0{
 	draw_rectangle(0,0,room_width,room_height,false)
 	
 
-	opacidade-=0.008;
+	opacidade-=0.01;
 	
 
-	
+	}
 }
-
 	draw_set_color(-1);
 	draw_set_alpha(1);
     	

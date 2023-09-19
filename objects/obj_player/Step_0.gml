@@ -10,5 +10,5 @@ if(global.pause &&  place_meeting(x, y+1, obj_wall)) {
 
 global.paused= false;
 image_speed= 1;
-
+show_debug_message(global.dialogo_ja_feito)
 state();

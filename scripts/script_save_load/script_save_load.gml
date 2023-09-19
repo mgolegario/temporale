@@ -134,7 +134,7 @@ for (var i=0; i<_room_struct_menu.menu_num; i++){
 	}
 }
 	
-function save_game(_filenum=0){
+function save_game(_filenum){
 
 var _save_array = array_create(0);
 
@@ -149,7 +149,7 @@ var _obj_menu= instance_exists(obj_menu);
 	global.stat_data.save_rm = room_get_name(room);
 	
 	global.stat_data.enemy=global.level_data.level_1;
-	global.stat_data.menu= global.level_data.level_menu;
+
 	
 	array_push(_save_array, global.stat_data);
 	
@@ -183,7 +183,7 @@ function load_game(_filenum){
 	global.level_data= array_get(_load_array, 1);
 	
 	global.level_data.level_1=global.stat_data.enemy;
-	global.level_data.level_menu=global.stat_data.menu;
+
 	
 	
 	var _load_room= asset_get_index(global.stat_data.save_rm);
@@ -199,7 +199,67 @@ function load_game(_filenum){
 	}
 	
 	
+	
+	
 	load_room();
 	
 
 }
+
+function save_menu(_filenum){
+
+var _save_array = array_create(0);
+
+var _obj_menu= instance_exists(obj_menu);
+
+	save_room();
+
+
+	global.stat_menu.menu= global.level_data.level_menu;
+	
+	array_push(_save_array, global.stat_data);
+	
+	array_push(_save_array, global.level_data);
+	
+	var _filename="savemenu"+ string(_filenum) +".sav";
+	var _json= json_stringify(_save_array);
+	var _buffer = buffer_create(string_byte_length(_json)+1,buffer_fixed, 1);
+	buffer_write(_buffer, buffer_string, _json);
+	buffer_save(_buffer, _filename);
+	buffer_delete(_buffer);
+	
+	
+
+
+}
+
+
+function load_menu(_filenum){
+	var _filename="savemenu"+ string(_filenum) +".sav";
+	if !file_exists(_filename){exit;};
+	
+	var _buffer= buffer_load(_filename);
+	var _json= buffer_read(_buffer, buffer_string);
+	buffer_delete(_buffer);
+	
+	var _load_array = json_parse(_json);
+	
+	
+	global.stat_menu= array_get(_load_array, 0);
+	global.level_data= array_get(_load_array, 1);
+	
+	global.level_data.level_menu=global.stat_menu.menu;
+	
+	
+	obj_save_load.skip_room_saving=true;
+	
+	load_room();
+	
+	
+	}
+	
+	
+	
+	
+
+

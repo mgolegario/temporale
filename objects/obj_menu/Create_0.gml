@@ -16,10 +16,9 @@ op_space = 100;
 
 pos= 0;
 
-option[0,0] = "New Game";
-option[0,1] = "Continue";
-option[0,2] = "Settings";
-option[0,3] = "Quit";
+option[0,0] = "Play";
+option[0,1] = "Settings";
+option[0,2] = "Quit";
 
 option[1,0] = "Window Size";
 option[1,1] = "Sound";
@@ -58,6 +57,11 @@ option[8,1] = "Back";
 
 option[9,0] = "algo";//+ global.right;
 option[9,1] = "Back";
+
+option[10,0] = "Saved Game 1";
+option[10,1] = "Saved Game 2";
+option[10,2] = "Saved Game 3";
+option[10,3] = "Back";
 
 op_length = 0;
 menu_level = 0;

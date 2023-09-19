@@ -57,9 +57,9 @@ switch (menu_level) {
 	case 0:
 		switch (pos){
 
-			case 0: room_goto(rm_pre_historia); break;
+			case 0: menu_level=10; break;
 	
-			case 1:  break;
+			case 1:  menu_level=11;break;
 	
 			case 2: menu_level=1; break;
 			
@@ -82,12 +82,12 @@ switch (menu_level) {
 			
 			if (width_choice=0 and height_choice =0){
 				menu_level= 0;
-				
+					save_menu(1);
 				}else{
 				ajusta(); 
 				window_set_position(dwidth/2-width_choice/2, dheight/2-height_choice/2); 
 				menu_level= 0;	
-				
+					save_menu(1);
 			}
 			
 			break;
@@ -148,7 +148,7 @@ switch (menu_level) {
 	switch (pos){
 		
 			case 0: menu_level=5 ;break;
-		case 1: menu_level=1; break;
+			case 1: menu_level=1; break;
 		
 			}
 			break;
@@ -209,6 +209,25 @@ switch (menu_level) {
 			
 			break;
 			
+	case 10:
+	switch (pos){
+		
+			case 0: if option[10,0]= "Saved Game 1"{load_game(1)}else{save_game(1);room_goto(rm_pre_historia);};
+			break;
+			
+			case 1: if option[10,1]= "Saved Game 2"{load_game(2)}else{save_game(2);room_goto(rm_pre_historia);};
+			break;
+			
+			case 2: if option[10,2]= "Saved Game 3"{load_game(3)}else{save_game(3);room_goto(rm_pre_historia);};
+			break;
+			
+			case 3: menu_level=0;break;
+		
+			}
+			
+			break;
+			
+	
 }
 
 
@@ -217,5 +236,13 @@ switch (menu_level) {
 }
 
 
+
+if !file_exists("savedata1.sav"){option[10,0]= "Free Space"};
+				
+if !file_exists("savedata2.sav"){option[10,1]= "Free Space"};	
+			
+if !file_exists("savedata3.sav"){option[10,2]= "Free Space"};
+		
+			
 
 option[5,0] = string(valor_) + "%";

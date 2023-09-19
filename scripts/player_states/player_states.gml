@@ -1,5 +1,9 @@
 function player_state_free () {
+	
+if global.dialogo_ja_feito=false{
+state=player_state_cutscene1;
 
+}
 
 // EIXO DO X
 
@@ -95,6 +99,9 @@ if (sprite_index== spr_player_fall && vspd>14) {
 
 }
 //FIM ESCORREGAR RAMPA APOS CERTA ALTURA
+
+
+
 
 
 if input_check_pressed("attack") and ground{
@@ -226,7 +233,7 @@ function player_state_cutscene1 (){
 
 
 
-show_debug_message(levantou)
+
 
 if opacidade<=0{
 
@@ -284,7 +291,7 @@ if levantou==false and (image_index>= image_number-1){
  
 	state= player_state_free;
 	comecou_diag=false;
- 
+	
  }
 }else{
 image_speed=0;

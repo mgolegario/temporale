@@ -38,7 +38,7 @@ tempo_morto= 2;
 comecou_diag= false;
 
 
-state = player_state_cutscene1;
+state = player_state_free;
 
 
 

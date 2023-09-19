@@ -23,3 +23,9 @@ global.level_data= {
 
 
 }
+
+global.menu_data={
+
+menu:0,
+
+}
