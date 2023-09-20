@@ -1,6 +1,8 @@
 width = 0;
 height = 0;
 
+global.can_save=false;
+global.can_save1=false;
 opcao_selected=false;
 mouse_usado= false;
 
