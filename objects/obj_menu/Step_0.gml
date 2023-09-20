@@ -45,7 +45,7 @@ if menu_level=5 {
 // 
 
 
-
+show_debug_message(opcao_selected)
 
 if (input_check_pressed("accept")){
 	

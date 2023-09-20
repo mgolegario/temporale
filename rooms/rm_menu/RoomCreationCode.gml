@@ -1,1 +1,0 @@
-if file_exists("savemenu1.sav"){load_menu(1)}

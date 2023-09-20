@@ -42,7 +42,7 @@ var _mouse_colision=point_in_rectangle(_mx,_my, x + op_border, y + op_border+op_
 		draw_sprite_ext(spr_seta, image_index, x+op_border/2, posyi+ posy, 1, 1, 0, c_white, 1);
 		_recuo =5;
 		
-	
+
 		mouse_usado=true;
 		pos= i;
 		
@@ -60,18 +60,20 @@ var _mouse_colision=point_in_rectangle(_mx,_my, x + op_border, y + op_border+op_
 		_c= c_yellow
 		draw_sprite_ext(spr_seta, image_index, x+op_border/2, posyi+ posy, 1, 1, 0, c_white, 1);
 		_recuo =5;
-	
+
 	
 		
 	}
 	
-	
+
 	
 draw_text_color(x+op_border+_recuo, y+op_border + op_space *i, option[menu_level, i], _c, _c, _c, _c, 1);
 
 
 
 }
+
+
 
 draw_set_halign(-1);
 draw_set_valign(-1);
