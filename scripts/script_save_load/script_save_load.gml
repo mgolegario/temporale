@@ -257,9 +257,7 @@ function load_menu(_filenum){
 	
 	
 	}
-	
-	
-	
+		
 	
 
 
