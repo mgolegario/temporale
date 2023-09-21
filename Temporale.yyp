@@ -68,6 +68,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sounds","folderPath":"folders/Sounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_abertura","folderPath":"folders/Sprites/sprites_abertura.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_bg_futuro","folderPath":"folders/Sprites/sprites_bg_futuro.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_bg_pre_hist","folderPath":"folders/Sprites/sprites_bg_pre_hist.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_colisao","folderPath":"folders/Sprites/sprites_colisao.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_cutscene_inicial","folderPath":"folders/Sprites/sprites_cutscene_inicial.yy",},
@@ -79,7 +80,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_player_rel","folderPath":"folders/Sprites/sprites_player_rel.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprites_bg_futuro","folderPath":"folders/Sprites/sprites_bg_futuro.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"controllerblacklist.csv","CopyToMask":-1,"filePath":"datafiles",},

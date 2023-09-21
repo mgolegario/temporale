@@ -58,7 +58,7 @@ option[7,3] = "More...";
 option[8,0] = "Attack:  LMB";
 option[8,1] = "Back";
 
-option[9,0] = "algo";//+ global.right;
+option[9,0] = "";
 option[9,1] = "Back";
 
 option[10,0] = "Saved Game 1";
