@@ -217,7 +217,7 @@ switch (menu_level) {
 			case 1: if option[10,1]= "Saved Game 2"{load_game(2)}else{global.can_save=true;room_goto(rm_pre_historia);};
 			break;
 			
-			case 2: if option[10,2]= "Saved Game 3"{load_game(3)}else{global.can_save1=true;room_goto(rm_pre_historia);};
+			case 2: if option[10,2]= "Saved Game 3"{load_game(3)}else{global.can_save1=true;room_goto(rm_futuro);};
 			break;
 			
 			case 3: menu_level=0;break;
