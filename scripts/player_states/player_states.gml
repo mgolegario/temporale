@@ -378,7 +378,7 @@ andando=false;
 		
 	}
 
-	if diag_escolha state=player_state_dead;
+ state=player_state_dead;
 
 	
  }
@@ -401,7 +401,9 @@ andando=false;
 		
 	}
 
-	if diag_escolha state=player_state_free;
+state=player_state_free;
+	
+	
 
  }
 	

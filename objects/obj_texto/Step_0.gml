@@ -78,6 +78,7 @@ if fala=11 {troca_balao=5;};
 
 if global.escolheu=false && global.controle_cut2{
 if fala=0{troca_balao=5;};
+
 }
 
 if input_check_pressed("attack") && foi_falado==true {
@@ -85,10 +86,10 @@ if input_check_pressed("attack") && foi_falado==true {
 	fala++;
 	foi_falado=false;
 	if fala>= array_length(texto){
-	if obj_player.state=player_state_cutscene1{obj_player.dialogo_finalizado_cut1=true;}
-	if obj_player.state=player_state_cutscene2 && !obj_player.dialogo_finalizado_cut2{obj_player.dialogo_finalizado_cut2=true; obj_player.pode_criar=true;}
-	if global.escolheu{obj_player.diag_escolha=true}
-	instance_destroy();
+		if obj_player.state=player_state_cutscene1{obj_player.dialogo_finalizado_cut1=true;}
+		if obj_player.state=player_state_cutscene2 {obj_player.dialogo_finalizado_cut2=true; obj_player.pode_criar=true;}
+	
+		instance_destroy();
 	}
 	
 	}
