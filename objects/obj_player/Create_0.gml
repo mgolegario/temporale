@@ -6,6 +6,7 @@ grv = 0.5;
 
 life=4;
 
+
 opacidade=1;
 cutscene_start=false;
 
@@ -35,10 +36,19 @@ levantou=false;
 parou=false;
 dialogo_finalizado_cut1=false;
 dialogo_finalizado_cut2=false;
+diag_escolha=false;
+
 tempo_morto= 2;
 comecou_diag1= false;
 comecou_diag2= false;
 andando=true;
+pode_criar=false;
+
+global.escolheu_op_certa=false;
+global.escolheu=false;
+global.controle_cut2=false;
+
+
 
 state = player_state_free;
 

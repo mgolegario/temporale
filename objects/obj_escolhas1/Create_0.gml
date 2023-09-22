@@ -6,4 +6,3 @@ options=["A) Paleolítico","B) Neolítico","C) Triássico","D) Cretáceo"];
 
 
 
-

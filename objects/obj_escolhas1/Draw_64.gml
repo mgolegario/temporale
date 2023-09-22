@@ -11,7 +11,7 @@ draw_set_font(fnt_dialogo);
 
 for (var i=0; i<array_length(options); i++){
 
-_c= c_white;
+var _c= c_white;
 	
 	if pos_escolha== i{
 	    

@@ -61,21 +61,24 @@ if fala=16 {troca_balao=0;};
 
 if obj_player.comecou_diag2{
 	
-if fala=0 {troca_balao=0;};
-if fala=1 {troca_balao=2;};
-if fala=2 {troca_balao=1;};
-if fala=3 {troca_balao=3;};
-if fala=4 {troca_balao=0;};
-if fala=5 {troca_balao=2;};
-if fala=6 {troca_balao=3;};
-if fala=7 {troca_balao=0;};
-if fala=8 {troca_balao=3;};
-if fala=9 {troca_balao=1;};
-if fala=10 {troca_balao=2;};
-if fala=11 {troca_balao=1;};
+if fala=0 {troca_balao=1;};
+if fala=1 {troca_balao=4;};
+if fala=2 {troca_balao=0;};
+if fala=3 {troca_balao=5;};
+if fala=4 {troca_balao=1;};
+if fala=5 {troca_balao=5;};
+if fala=6 {troca_balao=0;};
+if fala=7 {troca_balao=4;};
+if fala=8 {troca_balao=1;};
+if fala=9 {troca_balao=5;};
+if fala=10 {troca_balao=1;};
+if fala=11 {troca_balao=5;};
 
 }
 
+if global.escolheu=false && global.controle_cut2{
+if fala=0{troca_balao=5;};
+}
 
 if input_check_pressed("attack") && foi_falado==true {
 	
@@ -83,7 +86,8 @@ if input_check_pressed("attack") && foi_falado==true {
 	foi_falado=false;
 	if fala>= array_length(texto){
 	if obj_player.state=player_state_cutscene1{obj_player.dialogo_finalizado_cut1=true;}
-	if obj_player.state=player_state_cutscene2{obj_player.dialogo_finalizado_cut2=true;}
+	if obj_player.state=player_state_cutscene2 && !obj_player.dialogo_finalizado_cut2{obj_player.dialogo_finalizado_cut2=true; obj_player.pode_criar=true;}
+	if global.escolheu{obj_player.diag_escolha=true}
 	instance_destroy();
 	}
 	

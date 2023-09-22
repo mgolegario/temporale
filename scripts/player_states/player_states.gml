@@ -323,12 +323,10 @@ andando=false;
  }
 
 
-var _pode_criar=false;
 
  
  if !comecou_diag2 and !dialogo_finalizado_cut2 and input_check_pressed("dialogo") {
 	comecou_diag2=true;
-	_pode_criar=true;
 	layer_create(-200,"dialogo");
 	instance_create_layer(x,y, "dialogo",obj_texto);
 
@@ -353,11 +351,62 @@ var _pode_criar=false;
 
  }
  
+
  
-  if _pode_criar{
+  if pode_criar{
  
 	instance_create_depth(x,y,-150, obj_escolhas1)
-	_pode_criar=false;
+	pode_criar=false;
 	
  }
-}
+
+ 
+ if !global.escolheu_op_certa && global.escolheu {
+	
+	global.escolheu=false;
+	global.controle_cut2=true;
+	
+	
+	layer_create(-200,"dialogo");
+	instance_create_layer(x,y, "dialogo",obj_texto);
+
+	with obj_texto{
+	
+	
+		texto=["Parecer que você escolher opção errada. *BONK*"];
+	
+		
+	}
+
+	if diag_escolha state=player_state_dead;
+
+	
+ }
+ 
+ if global.escolheu_op_certa && global.escolheu{
+	
+	global.escolheu=false;
+	global.controle_cut2=true;
+	
+	
+	
+	layer_create(-200,"dialogo");
+	instance_create_layer(x,y, "dialogo",obj_texto);
+
+	with obj_texto{
+	
+	
+		texto=["Parecer que você escolher opção certa. Ser bom conhecer você!"];
+	
+		
+	}
+
+	if diag_escolha state=player_state_free;
+
+ }
+	
+	
+ }
+ 
+ 
+

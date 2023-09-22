@@ -5,11 +5,11 @@ if pos_escolha < 0 {pos_escolha=3};
 if input_check_pressed("accept"){
 switch (pos_escolha){
 
-case 0: obj_player.state=player_state_dead;break;
-case 1: obj_player.state=player_state_dead;break;
-case 2: obj_player.state=player_state_free;break;
-case 3: obj_player.state=player_state_dead;break;
+case 0: global.escolheu_op_certa=false;global.escolheu=true; instance_destroy();break;
+case 1: global.escolheu_op_certa=false;global.escolheu=true;	instance_destroy();break;
+case 2: global.escolheu_op_certa=true;global.escolheu=true; instance_destroy();break;
 
+case 3: global.escolheu_op_certa=false;global.escolheu=true;instance_destroy();break;
 
 }
 
