@@ -1,3 +1,3 @@
-depth=-500;
+depth=-150;
 
 rm_game=false;

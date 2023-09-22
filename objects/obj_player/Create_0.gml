@@ -34,9 +34,11 @@ global.caiu_alto = false;
 levantou=false;
 parou=false;
 dialogo_finalizado_cut1=false;
+dialogo_finalizado_cut2=false;
 tempo_morto= 2;
-comecou_diag= false;
-
+comecou_diag1= false;
+comecou_diag2= false;
+andando=true;
 
 state = player_state_free;
 

@@ -19,5 +19,4 @@ if opacidade>0{
 }
 	draw_set_color(-1);
 	draw_set_alpha(1);
-    	
-
+	

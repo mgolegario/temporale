@@ -124,6 +124,8 @@ state= player_state_attack;
 	}
 	
 	
+	if !dialogo_finalizado_cut2 && distance_to_object(obj_sachez) <=500 {state=player_state_cutscene2;}
+	
 if (place_meeting(x+6, y-2, obj_slope_right) && global.caiu_alto){
 		
 	state= player_state_slide_right;
@@ -232,9 +234,6 @@ if !(place_meeting(x-6, y-2, obj_slope_left) && global.caiu_alto){
 function player_state_cutscene1 (){
 
 
-
-
-
 if opacidade<=0{
 
 image_speed=0.5;
@@ -262,8 +261,8 @@ if levantou==false and (image_index>= image_number-1){
 
 
  
- if !comecou_diag and !dialogo_finalizado_cut1 and input_check_pressed("dialogo") {
-	comecou_diag=true;
+ if !comecou_diag1 and !dialogo_finalizado_cut1 and input_check_pressed("dialogo") {
+	comecou_diag1=true;
 	layer_create(-200,"dialogo");
 	instance_create_layer(x,y, "dialogo",obj_texto);
 
@@ -290,7 +289,7 @@ if levantou==false and (image_index>= image_number-1){
   if dialogo_finalizado_cut1==true{
  
 	state= player_state_free;
-	comecou_diag=false;
+	comecou_diag1=false;
 	
  }
 }else{
@@ -298,4 +297,67 @@ image_speed=0;
 sprite_index=spr_player_inicio_cutscene;
 }
 
+}
+
+
+
+
+function player_state_cutscene2 (){
+	
+image_speed=0.5;	
+	
+if andando {
+	
+dialogo_finalizado_cut2=false;
+image_speed=0.5;
+hspd=5;
+sprite_index=spr_player_run
+}
+
+ if andando && distance_to_object(obj_sachez)<=70{
+	hspd=0;
+ 	image_speed=0.5;
+	sprite_index= spr_player_idle;
+
+andando=false;
+ }
+
+
+var _pode_criar=false;
+
+ 
+ if !comecou_diag2 and !dialogo_finalizado_cut2 and input_check_pressed("dialogo") {
+	comecou_diag2=true;
+	_pode_criar=true;
+	layer_create(-200,"dialogo");
+	instance_create_layer(x,y, "dialogo",obj_texto);
+
+	with obj_texto{
+	
+	
+		texto=["Olá?",
+		"UGA UGA UGA!!!",
+		"Calma, calma. Eu não vim pra te atacar.",
+		"Buga?",
+		"Que? Tenta mexer a boca que nem eu faço.",
+		"Uga uga, olá, buga? O que você fazer aqui? Mim não conhecer você.",
+		"Prazer, meu nome é Adler. Eu acabei perdido aqui, gostaria de saber como eu faço para continuar subindo.",
+		"Mim ser Sachez. Mim não deixar você passar.",
+		"Qual foi Sachez, não tem nada que te faça me deixar passar?",
+		"Ter coisa para fazer. Responder pergunta. Se você errar mim *BONK* você.",
+		"(Será que é realmente ruim se eu tomar um *BONK*? Acho que vale o risco). Pode mandar a pergunta!",
+		"Qual ser o período da pré-história caracterizar pela extinção em massa, incluir os dinossauros?"];
+	
+		
+	}
+
+ }
+ 
+ 
+  if _pode_criar{
+ 
+	instance_create_depth(x,y,-150, obj_escolhas1)
+	_pode_criar=false;
+	
+ }
 }

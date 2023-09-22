@@ -37,7 +37,7 @@ if input_check_pressed("attack") && foi_falado==false{
 if indice=string_length(texto[fala]) alarm[0]=5;
 
 
-if obj_player.comecou_diag{
+if obj_player.comecou_diag1{
 	
 if fala=0 {troca_balao=0;};
 if fala=1 {troca_balao=2;};
@@ -59,14 +59,33 @@ if fala=16 {troca_balao=0;};
 
 }
 
+if obj_player.comecou_diag2{
+	
+if fala=0 {troca_balao=0;};
+if fala=1 {troca_balao=2;};
+if fala=2 {troca_balao=1;};
+if fala=3 {troca_balao=3;};
+if fala=4 {troca_balao=0;};
+if fala=5 {troca_balao=2;};
+if fala=6 {troca_balao=3;};
+if fala=7 {troca_balao=0;};
+if fala=8 {troca_balao=3;};
+if fala=9 {troca_balao=1;};
+if fala=10 {troca_balao=2;};
+if fala=11 {troca_balao=1;};
+
+}
+
+
 if input_check_pressed("attack") && foi_falado==true {
 	
 	fala++;
 	foi_falado=false;
 	if fala>= array_length(texto){
-	obj_player.dialogo_finalizado_cut1=true;
+	if obj_player.state=player_state_cutscene1{obj_player.dialogo_finalizado_cut1=true;}
+	if obj_player.state=player_state_cutscene2{obj_player.dialogo_finalizado_cut2=true;}
 	instance_destroy();
 	}
 	
 	}
-	show_debug_message(global.pitch)
+
