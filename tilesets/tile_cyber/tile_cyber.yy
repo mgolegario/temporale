@@ -16,8 +16,8 @@
     "path": "folders/Tile Sets.yy",
   },
   "spriteId": {
-    "name": "tile_cyberpunk",
-    "path": "sprites/tile_cyberpunk/tile_cyberpunk.yy",
+    "name": "spr_cyberpunk",
+    "path": "sprites/spr_cyberpunk/spr_cyberpunk.yy",
   },
   "spriteNoExport": false,
   "textureGroupId": {

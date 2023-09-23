@@ -90,7 +90,7 @@ if(!input_check("jump") && vspd <0) {
 
 // ESCORREGAR NA RAMPA APOS CERTA ALTURA
 
-if (sprite_index== spr_player_fall && vspd>14) {
+if vspd>15 {
 	global.caiu_alto =true;
 	alarm [1]= 10;
 
@@ -100,6 +100,19 @@ if (sprite_index== spr_player_fall && vspd>14) {
 }
 //FIM ESCORREGAR RAMPA APOS CERTA ALTURA
 
+
+if (place_meeting(x+10, y+5, obj_slope_right) && global.caiu_alto){
+		
+	state= player_state_slide_right;
+
+}
+
+if (place_meeting(x-10, y+5, obj_slope_left) && global.caiu_alto){
+		
+	state= player_state_slide_left;
+
+
+}
 
 
 
@@ -126,16 +139,7 @@ state= player_state_attack;
 	
 	if !dialogo_finalizado_cut2 && distance_to_object(obj_sachez) <=500 {state=player_state_cutscene2;}
 	
-if (place_meeting(x+6, y-2, obj_slope_right) && global.caiu_alto){
-		
-	state= player_state_slide_right;
 
-}else if (place_meeting(x-6, y-2, obj_slope_left) && global.caiu_alto){
-		
-	state= player_state_slide_left;
-
-
-}
 
 
 
@@ -204,13 +208,10 @@ function player_state_slide_right () {
 
 move_dir = point_direction(0,0,-1,0);
 hspd = lengthdir_x(7, move_dir);
+vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
 image_xscale =abs(x_scale)*-1;
 
-	if !(place_meeting(x+6, y-2, obj_slope_right) && global.caiu_alto){
-		
-		state=player_state_free;
-
-	}
 
 }
 
@@ -220,13 +221,12 @@ function player_state_slide_left () {
 
 move_dir = point_direction(0,0,1,0);
 hspd = lengthdir_x(7, move_dir);
+vspd+=grv;
+vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
 image_xscale =abs(x_scale);
 
-if !(place_meeting(x-6, y-2, obj_slope_left) && global.caiu_alto){
-		
-		state=player_state_free;
 
-}
 
 }
 
