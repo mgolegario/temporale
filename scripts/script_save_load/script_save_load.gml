@@ -64,7 +64,7 @@ for (var i=0; i<_menu_num;i++){
 	
 	
 
-	if room==rm_pre_historia{
+	if room==rm_pre_historia or room==rm_futuro{
 		
 		global.level_data.level_1=_room_struct;
 		
@@ -90,7 +90,7 @@ function load_room(){
 	
 	// Pegar os dados de acordo com a Room que o player estiver
 	
-	if room== rm_pre_historia{_room_struct = global.level_data.level_1};
+	if room== rm_pre_historia or room==rm_futuro{_room_struct = global.level_data.level_1};
 	if room== rm_menu{_room_struct_menu = global.level_data.level_menu};
 	
 	

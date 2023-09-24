@@ -29,7 +29,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_bg_pause",
+    "path": "sprites/spr_bg_pause/spr_bg_pause.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
