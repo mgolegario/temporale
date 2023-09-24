@@ -1,7 +1,7 @@
 #region CAMERA ESTILO JUMP KING
 var _camera_perto=false;
 
-if obj_player.state=player_state_cutscene1 or obj_player.state=player_state_cutscene2 or obj_player.state=player_state_cutscene3 or obj_player.state=player_state_dead or obj_player.state=player_state_cutscene4 or obj_player.state=player_state_cutscene5{
+if obj_player.state=player_state_cutscene1 or obj_player.state=player_state_cutscene2 or obj_player.state=player_state_cutscene3 or obj_player.state=player_state_dead or obj_player.state=player_state_cutscene4 or obj_player.state=player_state_cutscene5 or obj_player.state=player_state_cutscene6{
 _camera_perto=true;
 }else{
 _camera_perto=false;

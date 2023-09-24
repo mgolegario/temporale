@@ -140,7 +140,8 @@ state= player_state_attack;
 	if !dialogo_finalizado_cut2 && distance_to_object(obj_sachez) <=500 {state=player_state_cutscene2;}
 	
 
-	if !dialogo_finalizado_cut4 && distance_to_object(obj_olegario) <=100 {state=player_state_cutscene4;andando=true;}
+	if !dialogo_finalizado_cut4 && distance_to_object(obj_olegario) <=64 {state=player_state_cutscene4;andando=true;}
+	if !dialogo_finalizado_cut6 && distance_to_object(obj_luiz) <=64 {state=player_state_cutscene6;andando=true;}
 
 
 }
@@ -168,10 +169,6 @@ function player_state_dead(){
 
 }
 	
-
-
-
-
 
 	
 function player_state_attack(){
@@ -229,6 +226,7 @@ image_xscale =abs(x_scale);
 
 
 }
+
 
 
 function player_state_cutscene1 (){
@@ -298,7 +296,6 @@ sprite_index=spr_player_inicio_cutscene;
 }
 
 }
-
 
 
 
@@ -412,7 +409,7 @@ state=player_state_free;
  
 
   
- function player_state_cutscene3(){
+function player_state_cutscene3(){
  
  with obj_sachez{
 	 
@@ -441,7 +438,8 @@ sprite_index=spr_sachez;
  }
  
  
- function player_state_cutscene4(){
+ 
+function player_state_cutscene4(){
 
 
  image_speed=0.5;	
@@ -551,6 +549,8 @@ state=player_state_free;
  }
  }
 
+
+
 function player_state_cutscene5(){
 var _caiu_no_chao=false;
  if input_check_pressed("diagPass"){
@@ -573,3 +573,59 @@ if _caiu_no_chao state=player_state_dead;
 
 }
  
+ 
+ 
+function player_state_cutscene6(){
+ 
+ image_speed=0.5;	
+	
+if andando {
+	
+dialogo_finalizado_cut6=false;
+image_speed=0.5;
+hspd=5;
+sprite_index=spr_player_run
+}
+
+ if andando && distance_to_object(obj_luiz)<=20{
+	hspd=0;
+ 	image_speed=0.5;
+	sprite_index= spr_player_idle;
+
+andando=false;
+ }
+
+
+
+ 
+ if !comecou_diag6 and !dialogo_finalizado_cut6 and input_check_pressed("dialogo") and distance_to_object(obj_luiz)<=20{
+	comecou_diag6=true;
+	layer_create(-200,"dialogo");
+	instance_create_layer(x,y, "dialogo",obj_texto);
+
+	with obj_texto{
+	
+	
+		texto=["Saudações Viajante Temporal",
+		"Não é possível que seja outra pergunta que eu vou morrer se eu não responder certo.",
+		"Que falta de educação jovem, meu nome é Luiz, e o seu?",
+		"Meu nome é Adler, prazer.",
+		"Eu estou tendo alguns problemas com minha caranga aqui, poderia tentar me ajudar?",
+		"Peraí, como sabe que eu sou um viajante temporal?",
+		"Grande Olegario mandou no grupo da cidade!",
+		"Ah ta, aquele cara chato.",
+		"EU ESCUTEI ISSO MUCHACHO!",//OLEGARIO
+		"Bom voltando ao meu ponto, poderia me ajudar? Não é tão difícil, basta ordenar os números corretamente.",
+		"Não tenho nada pra fazer mesmo, vamos!"];
+	
+		
+	}
+
+ }
+ 
+if dialogo_finalizado_cut6{
+room_goto(rm_puzzle);
+}
+
+ 
+ }

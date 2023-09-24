@@ -2,7 +2,7 @@ estado= noone;
 tempo_estado= 500;
 timer_estado= 0;
 exclamacao_altura=1;
-life=3;
+life=1;
 
 tempo_morto=5;
 
@@ -17,14 +17,14 @@ hspd=0;
 move=0;
 move_dir = 0;
 move_spd = 0;
-move_spd_max= 5.5;
+move_spd_max= 8;
 acc = 0.45;
 dcc = 0.45;
 
-y_scale = 4;
-x_scale = 4;
+y_scale = 4.5;
+x_scale = 4.5;
 
-larg_visao= 400;
+larg_visao= 2000;
 alt_visao= sprite_height;
 alvo= noone;
 
@@ -38,6 +38,7 @@ tempo_parado=duracao_parado;
 
 morreu= false;
 
+	
 	
 muda_estado = function(_estado){
 
@@ -63,59 +64,44 @@ estado_morto= function(){
 	image_speed=1;
 
 
-
-	sprite_index=sprite_morto;
+	sprite_index=spr_bossFut_death;
 	
 	if (image_index>= image_number-1)&& !morreu{ 
 		morreu= true;
 	
 	}
-	
 
-		
 	if morreu && tempo_morto>0{
 	
 		image_speed=0; 
-		image_index=11;
-		tempo_morto-= delta_time/1000000;
-		
+		image_index=20;
 	}
-	
-	if tempo_morto<=0{
-		image_speed=1;
-		sprite_index=sprite_desaparecendo;
-		
-		
-		if (image_index>= image_number-1){ 
-	instance_destroy();
-		
-	}
-	}
-	
-	
-
  
 }
 
 
 
 
-estado_parado= function(){
 
-	
-	sprite_index= sprite_parado;
-	muda_estado([estado_passeando, estado_parado]);
+estado_dormindo= function(){
+
+
+	sprite_index= spr_bossFut_idle;
 	move=0;
-	
+
+
+
+
 	alvo= campo_visao(larg_visao, alt_visao, image_xscale/4)
 	
-	if (alvo) {
-	estado= estado_persegue
-	
+	if (alvo){
+		estado= estado_persegue;
+		
 	}
+
+
 	
 }
-
 
 
 estado_passeando= function() {
@@ -128,7 +114,7 @@ estado_passeando= function() {
 	}
 
 
-		sprite_index = sprite_andando;
+		sprite_index = spr_bossFut_run;
 		image_speed = 0.5;
 		move_dir = point_direction(0,0,move,0);
 		move_spd = approach(move_spd, move_spd_max, acc);
@@ -147,11 +133,11 @@ hspd = lengthdir_x(move_spd, move_dir);
 	alvo= campo_visao(larg_visao, alt_visao, x_scale/4)
 	
 	if (alvo) {
+	
 	estado= estado_persegue
 	
 	}
 
-	muda_estado([estado_parado, estado_passeando]);	
 
 }
 
@@ -163,7 +149,7 @@ estado_persegue= function(){
 
 		var _dir= point_direction(x, y, alvo.x, alvo.y);
 
-		sprite_index= sprite_andando;
+		sprite_index= spr_bossFut_run;
 
 
 		hspd= lengthdir_x(move_spd_max, _dir);
@@ -177,25 +163,22 @@ estado_persegue= function(){
 
 		var _dist= point_distance(x, y, alvo.x, alvo.y); 
 
-		if (_dist< larg_visao/4) estado= estado_prepara_ataque;
+		if (_dist< larg_visao/15) estado=estado_prepara_ataque;
 
 
-		if (_dist>larg_visao/1.5) alvo=noone;
+		if (_dist>larg_visao/1) alvo=noone;
 
 
-	}else{
-	
-		muda_estado([estado_parado, estado_passeando]);	
+	}else{	
+	estado=estado_dormindo;
 
 	}
-
 }
-
 estado_prepara_ataque = function(){
 
 	
 	estou_atacando=true;
-	sprite_index= sprite_parado;
+	sprite_index= spr_bossFut_idle;
 
 	if sat<=1{
 	
@@ -223,21 +206,21 @@ image_speed=1;
 
 	tempo_ataque -= delta_time/1000000;
 
-	
 
-if image_index>4{
-if (!instance_exists(obj_enemy_hitbox)){
 
-instance_create_layer(x+(70*(x_scale/4)),y,layer,obj_enemy_hitbox);
+if image_index>-1{
+if (!instance_exists(obj_robo_hitbox)){
 
-}
-
+instance_create_layer(x+(70*(x_scale/4)),y,layer,obj_robo_hitbox);
 
 }
 
 
+}
 
-sprite_index=sprite_batendo;
+
+	sprite_index=spr_bossFut_attack;
+
 
 hspd=0;	
 vspd+=grv;
@@ -245,10 +228,10 @@ vspd = clamp(vspd, vspd_min, vspd_max);
 
  if (image_index>= image_number-1){ 
 	
-estado=estado_parado;
-		sprite_index=sprite_parado;
+estado=estado_persegue;
+		sprite_index=spr_bossFut_idle;
 		tempo_ataque=duracao_ataque;
-	if (instance_exists(obj_enemy_hitbox)) instance_destroy(obj_enemy_hitbox);
+	if (instance_exists(obj_robo_hitbox)) instance_destroy(obj_robo_hitbox);
 	
  }
 
@@ -275,4 +258,4 @@ campo_visao = function (_largura, _altura, _xscale){
 
 
 
-estado= estado_parado;
+estado= estado_dormindo;

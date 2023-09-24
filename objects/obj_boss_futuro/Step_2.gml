@@ -1,0 +1,60 @@
+repeat(abs(hspd)){
+
+if (place_meeting(x+sign(hspd), y, obj_wall)){
+	
+	if (!place_meeting(x+sign(hspd), y-2, obj_wall)) {
+
+	y-=2;
+
+	}
+	
+}else{
+			
+	if (!place_meeting(x+sign(hspd), y+2, obj_wall) ) { 
+
+		if(place_meeting(x+sign(hspd), y+4, obj_wall)){
+		y+=2;
+		
+		sprite_index=spr_enemy1_idle;
+
+
+		}
+	}
+}
+
+
+if (place_meeting(x+sign(hspd), y, obj_wall) or place_meeting(x+sign(hspd),y, obj_wall_enemy)){
+
+	tempo_parado -= delta_time/1000000;
+	
+	if tempo_parado <= 0 {
+		move=move*-1;
+		tempo_parado=duracao_parado;
+	}
+	
+	hspd= 0;
+
+break;
+
+}else{
+
+x+= sign(hspd);
+}
+
+}
+
+repeat(abs(vspd)){
+
+if (place_meeting(x, y+sign(vspd), obj_wall)){
+
+
+vspd= 0;
+break;
+
+}else{
+
+y+= sign(vspd);
+}
+
+
+}

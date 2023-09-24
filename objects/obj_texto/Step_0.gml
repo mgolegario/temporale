@@ -98,6 +98,21 @@ if fala=14 {troca_balao=7;};
 
 }
 
+if obj_player.comecou_diag6{
+	
+if fala=0 {troca_balao=9;};
+if fala=1 {troca_balao=1;};
+if fala=2 {troca_balao=8;};
+if fala=3 {troca_balao=0;};
+if fala=4 {troca_balao=8;};
+if fala=5 {troca_balao=1;};
+if fala=6 {troca_balao=9;};
+if fala=7 {troca_balao=1;};
+if fala=8 {troca_balao=7;};
+if fala=9 {troca_balao=9;};
+if fala=10 {troca_balao=1;};
+
+}
 
 if global.escolheu=false && global.controle_cut2{
 if fala=0{troca_balao=7;};
@@ -119,6 +134,7 @@ if input_check_pressed("diagPass") && foi_falado==true {
 		if obj_player.state=player_state_cutscene1{obj_player.dialogo_finalizado_cut1=true;}
 		if obj_player.state=player_state_cutscene2 {obj_player.dialogo_finalizado_cut2=true; obj_player.pode_criar=true;}
 		if obj_player.state=player_state_cutscene4 {obj_player.dialogo_finalizado_cut4=true; obj_player.pode_criar=true;}
+		if obj_player.state=player_state_cutscene6 {obj_player.dialogo_finalizado_cut6=true;}
 		instance_destroy();
 	}
 

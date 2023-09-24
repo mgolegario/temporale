@@ -1,4 +1,4 @@
-image_xscale=10;
+image_xscale=5;
 image_yscale=5;
 collision_list= ds_list_create();
 hitbox_list= ds_list_create();

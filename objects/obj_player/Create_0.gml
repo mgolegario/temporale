@@ -37,12 +37,14 @@ parou=false;
 dialogo_finalizado_cut1=false;
 dialogo_finalizado_cut2=false;
 dialogo_finalizado_cut4=false;
+dialogo_finalizado_cut6=false;
 diag_escolha=false;
 
 tempo_morto= 2;
 comecou_diag1= false;
 comecou_diag2= false;
 comecou_diag4= false;
+comecou_diag6= false;
 andando=true;
 pode_criar=false;
 

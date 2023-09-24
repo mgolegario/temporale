@@ -1,15 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_robo_hitbox",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "name": "obj_border",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "objects_colision",
-    "path": "folders/Objects/objects_colision.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_enemy_atk_hitbox",
-    "path": "sprites/spr_enemy_atk_hitbox/spr_enemy_atk_hitbox.yy",
+    "name": "sprite_border",
+    "path": "sprites/sprite_border/sprite_border.yy",
   },
   "spriteMaskId": null,
   "visible": true,
