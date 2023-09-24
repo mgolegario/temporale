@@ -208,16 +208,17 @@ switch (menu_level) {
 			
 			break;
 			
-	case 10:
+	case 10:	
+	global.pode_salvar=true;
 	switch (pos){
-		
-			case 0: if option[10,0]= "Saved Game 1"{load_game(1)}else{global.can_save=false;room_goto(rm_pre_historia);};
+	
+			case 0: if option[10,0]= "Saved Game 1"{load_game(1);obj_SFX.play_snd=true;}else{global.can_save=false;room_goto(rm_cutscene_inicial);obj_SFX.play_snd=true;};
 			break;
 			
-			case 1: if option[10,1]= "Saved Game 2"{load_game(2)}else{global.can_save=true;room_goto(rm_pre_historia);};
+			case 1: if option[10,1]= "Saved Game 2"{load_game(2);obj_SFX.play_snd=true;}else{global.can_save=true;room_goto(rm_cutscene_inicial);obj_SFX.play_snd=true;};
 			break;
 			
-			case 2: if option[10,2]= "Saved Game 3"{load_game(3)}else{global.can_save1=true;room_goto(rm_futuro);};
+			case 2: if option[10,2]= "Saved Game 3"{load_game(3);obj_SFX.play_snd=true;}else{global.can_save1=true;room_goto(rm_cutscene_inicial);obj_SFX.play_snd=true;};
 			break;
 			
 			case 3: menu_level=0;break;
@@ -241,7 +242,9 @@ if !file_exists("savedata1.sav"){option[10,0]= "Free Space"};
 if !file_exists("savedata2.sav"){option[10,1]= "Free Space"};	
 			
 if !file_exists("savedata3.sav"){option[10,2]= "Free Space"};
-		
+
+if obj_SFX.play_snd==false obj_SFX.menu_snd=true;		
+
 			
 
 option[5,0] = string(valor_) + "%";

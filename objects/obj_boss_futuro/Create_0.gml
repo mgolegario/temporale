@@ -189,7 +189,7 @@ estado_prepara_ataque = function(){
 	hspd=0;
 	vspd=0;
 
-	if sat>=0.3 {
+	if sat>=0.5 {
 		estado=estado_ataque;
 		alvo_dir=point_direction(x,y, alvo.x, alvo.y);
 		sat= 0;
@@ -212,7 +212,7 @@ if image_index>-1{
 if (!instance_exists(obj_robo_hitbox)){
 
 instance_create_layer(x+(70*(x_scale/4)),y,layer,obj_robo_hitbox);
-
+obj_SFX.ataque_snd3 = true;
 }
 
 

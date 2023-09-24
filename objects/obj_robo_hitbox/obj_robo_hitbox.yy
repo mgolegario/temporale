@@ -32,5 +32,5 @@
     "path": "sprites/spr_enemy_atk_hitbox/spr_enemy_atk_hitbox.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

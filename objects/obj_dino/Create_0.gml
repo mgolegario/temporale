@@ -197,7 +197,7 @@ estado_prepara_ataque = function(){
 	hspd=0;
 	vspd=0;
 
-	if sat>=0.3 {
+	if sat>=0.4 {
 		estado=estado_ataque;
 		alvo_dir=point_direction(x,y, alvo.x, alvo.y);
 		sat= 0;
@@ -240,7 +240,7 @@ estado=estado_persegue;
 		sprite_index=spr_dinoBoss_idle;
 		tempo_ataque=duracao_ataque;
 	if (instance_exists(obj_dino_hitbox)) instance_destroy(obj_dino_hitbox);
-	
+	obj_SFX.ataque_snd3 = true;
  }
 
 

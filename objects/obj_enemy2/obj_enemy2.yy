@@ -5,11 +5,11 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"sprite_andando","path":"objects/obj_enemy/obj_enemy.yy",},"value":"spr_cyberrobot_run",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"sprite_batendo","path":"objects/obj_enemy/obj_enemy.yy",},"value":"spr_cyberrobot_hit",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"sprite_parado","path":"objects/obj_enemy/obj_enemy.yy",},"value":"spr_cyberrobot_idle",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"sprite_morto","path":"objects/obj_enemy/obj_enemy.yy",},"value":"spr_cyberrobot_death",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"sprite_desaparecendo","path":"objects/obj_enemy/obj_enemy.yy",},"value":"spr_cyberrobot_explosion",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"sprite_andando","path":"objects/obj_enemy/obj_enemy.yy",},"value":"spr_cyberrobot_run",},
   ],
   "parent": {
     "name": "objetcs_people",

@@ -4,7 +4,7 @@ vspd_min = -14;
 vspd_max = 35;
 grv = 0.5;
 
-life=4;
+life=5;
 
 
 opacidade=1;
@@ -51,7 +51,9 @@ tempo_troca_sala=2;
 diag_acertou=false;
 diag_acertou2=false;
 
+
 global.pedaco_tmachine=0;
+global.dialogo_ja_feito=0;
 global.escolheu_op_certa=false;
 global.escolheu=false;
 global.controle_cut2=false;

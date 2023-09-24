@@ -48,6 +48,7 @@ return {
         action:  input_binding_gamepad_button(gp_face3),
         special: input_binding_gamepad_button(gp_face4),
         attack:  input_binding_gamepad_button(gp_face3),
+		diagPass: input_binding_gamepad_button(gp_face1),
 		
         aim_up:    input_binding_gamepad_axis(gp_axisrv, true),
         aim_down:  input_binding_gamepad_axis(gp_axisrv, false),

@@ -32,8 +32,4 @@ if state= player_state_slide_left or state= player_state_slide_right{
 
 
 
-
-
-
-
 state();

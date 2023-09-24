@@ -13,6 +13,8 @@ diag2:0,
 diag4:0,
 diag6:0,
 xscale:0,
+cut1:0,
+life:0,
 save_rm:"rm_pre_historia",
 
 enemy:0,

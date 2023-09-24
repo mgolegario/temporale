@@ -229,7 +229,7 @@ if image_index>4{
 if (!instance_exists(obj_enemy_hitbox)){
 
 instance_create_layer(x+(70*(x_scale/4)),y,layer,obj_enemy_hitbox);
-
+obj_SFX.ataque_snd2 = true;
 }
 
 

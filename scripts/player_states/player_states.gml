@@ -16,7 +16,7 @@ sprite_index = spr_player_run;
 image_speed = 0.5;
 move_dir = point_direction(0,0,input_check("right") - input_check("left"),0);
 move_spd = approach(move_spd, move_spd_max, acc);
-obj_SFX.walk_sound_loop = true;
+
 
 }else{
 
@@ -31,6 +31,12 @@ hspd = lengthdir_x(move_spd, move_dir);
 	image_xscale = sign(hspd)*x_scale;
 	
  }
+
+if hspd!=0{
+if room==rm_pre_historia && ground{obj_SFX.grass_snd= true;}
+if room==rm_futuro && ground{obj_SFX.metal_snd= true;}
+}
+
 
 // FIM EIXO DO X
 
@@ -135,7 +141,7 @@ state= player_state_attack;
 
 
 	}
-	
+
 	
 	if !dialogo_finalizado_cut2 && distance_to_object(obj_sachez) <=500 {state=player_state_cutscene2;}
 	
@@ -149,10 +155,11 @@ state= player_state_attack;
 		}
 			
 		if global.pedaco_tmachine=1{ 
-		
+			life=5;
 			instance_destroy(obj_tmachine);
+			global.pode_salvar=true;
 			tempo_troca_sala= tempo_troca_sala-delta_time/1000000
-			if tempo_troca_sala<=0{room_goto(rm_futuro);};
+			if tempo_troca_sala<=0{x=1024;y=10688;room_goto(rm_futuro);};
 		}
 		
 	if place_meeting(x,y,obj_tmachine2){
@@ -162,15 +169,24 @@ state= player_state_attack;
 		}
 		
 	if global.pedaco_tmachine=2{ 
-		
+			life=5;
+			if global.can_save1==false && global.can_save==false {save_game(1);}
+			if global.can_save==true {save_game(2);}
+			if global.can_save1==true && global.can_save==false{save_game(3);}
+			var pode_ir=false;
 			instance_destroy(obj_tmachine2);
-			tempo_troca_sala= tempo_troca_sala-delta_time/1000000
-			if tempo_troca_sala<=0{room_goto(rm_cutscene_final);};
+			tempo_troca_sala= tempo_troca_sala-delta_time/1000000;
+			if tempo_troca_sala<=0 {room_goto(rm_cutscene_final);};
+			 
 		}
+		
 }
 
 function player_state_dead(){
 	
+	
+	 global.pode_salvar=false;
+	 
 	vspd+=grv;
 	vspd = clamp(vspd, vspd_min, vspd_max);
 	var _morreu= false;
@@ -201,7 +217,7 @@ if image_index>2{
 if (!instance_exists(obj_player_hitbox)){
 
 instance_create_layer(x+(52*(image_xscale)),y,layer,obj_player_hitbox);
-
+obj_SFX.ataque_snd = true;
 }
 }
 
@@ -253,7 +269,8 @@ image_xscale =abs(x_scale);
 
 
 function player_state_cutscene1 (){
-
+vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
 
 if opacidade<=0{
 
@@ -308,11 +325,11 @@ if levantou==false and (image_index>= image_number-1){
 
  
   if dialogo_finalizado_cut1==true{
-	  
-	if global.can_save==false {save_game(1);}
-	if global.can_save==true {save_game(2);}
-	if global.can_save1==true{save_game(3);}
 	
+	if global.can_save1==false && global.can_save==false {save_game(1);}
+	if global.can_save==true {save_game(2);}
+	if global.can_save1==true && global.can_save==false{save_game(3);}
+	global.dialogo_ja_feito=true;
 	state= player_state_free;
 	comecou_diag1=false;
 	
@@ -327,7 +344,9 @@ sprite_index=spr_player_inicio_cutscene;
 
 
 function player_state_cutscene2 (){
-	
+vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
+
 image_speed=0.5;	
 	
 if andando {
@@ -427,9 +446,10 @@ andando=false;
 
 
 	dialogo_finalizado_cut2=true;
-	if global.can_save==false {save_game(1);}
+
+	if global.can_save1==false && global.can_save==false {save_game(1);}
 	if global.can_save==true {save_game(2);}
-	if global.can_save1==true{save_game(3);}
+	if global.can_save1==true && global.can_save==false{save_game(3);}
 	state=player_state_free;
 
 
@@ -441,12 +461,14 @@ andando=false;
 
   
 function player_state_cutscene3(){
- 
+ vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
  with obj_sachez{
 	 
 	 if !bateu{
 		 
 		sprite_index=spr_sachez_hit;
+		obj_SFX.bonk_snd=true;
 		image_xscale= -4;
 		bateu=true;
 		
@@ -459,7 +481,7 @@ function player_state_cutscene3(){
 
 sprite_index=spr_sachez;
   image_xscale= 4;
-  obj_player.state=player_state_dead
+  obj_player.state=player_state_dead;
  }
  
 
@@ -471,7 +493,8 @@ sprite_index=spr_sachez;
  
  
 function player_state_cutscene4(){
-
+vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
 
  image_speed=0.5;	
 	
@@ -573,10 +596,11 @@ andando=false;
 		
 	}
 	
-	
-	if global.can_save==false {save_game(1);}
+
+	if global.can_save1==false && global.can_save==false {save_game(1);}
 	if global.can_save==true {save_game(2);}
-	if global.can_save1==true{save_game(3);}
+	if global.can_save1==true && global.can_save==false{save_game(3);}
+	
 	state=player_state_free;
 	
 	
@@ -611,7 +635,9 @@ if _caiu_no_chao state=player_state_dead;
  
  
 function player_state_cutscene6(){
- 
+ vspd+=grv;
+vspd = clamp(vspd, vspd_min, vspd_max);
+
  image_speed=0.5;	
 	
 if andando {
@@ -660,12 +686,13 @@ andando=false;
  
 if dialogo_finalizado_cut6{
 	
-	if global.can_save==false {save_game(1);}
+	if global.can_save1==false && global.can_save==false{save_game(1);}
 	if global.can_save==true {save_game(2);}
-	if global.can_save1==true{save_game(3);}
+	if global.can_save1==true && global.can_save==false{save_game(3);}
 	room_goto(rm_puzzle);
 	
 }
 
  
  }
+ 

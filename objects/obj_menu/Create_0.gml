@@ -1,6 +1,6 @@
 width = 0;
 height = 0;
-
+global.pode_salvar=false;
 global.can_save=false;
 global.can_save1=false;
 opcao_selected=false;

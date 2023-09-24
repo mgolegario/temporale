@@ -1,4 +1,4 @@
-if keyboard_check(vk_space){
+if keyboard_check(vk_space) or input_check_pressed("diagPass"){
 room_goto(rm_menu)
 
 }
