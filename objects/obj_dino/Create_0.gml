@@ -68,7 +68,7 @@ estado_morto= function(){
 	
 	if (image_index>= image_number-1)&& !morreu{ 
 		morreu= true;
-	
+		instance_create_layer(990, 700, "Instances", obj_tmachine);
 	}
 
 	if morreu && tempo_morto>0{
@@ -76,6 +76,8 @@ estado_morto= function(){
 		image_speed=0; 
 		image_index=4;
 	}
+ 
+	
  
 }
 

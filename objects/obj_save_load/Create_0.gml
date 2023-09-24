@@ -8,6 +8,11 @@ global.stat_data={
 
 save_x:0,
 save_y:0,
+diag1:0,
+diag2:0,
+diag4:0,
+diag6:0,
+xscale:0,
 save_rm:"rm_pre_historia",
 
 enemy:0,

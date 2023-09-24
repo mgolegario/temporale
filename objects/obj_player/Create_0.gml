@@ -22,8 +22,8 @@ jump_height = 14;
 coyote_time_max = 12;
 coyote_time = 0;
 
-x_scale = 4;
-y_scale = 4;
+x_scale = 1;
+y_scale = 1;
 
 move = 0;
 ground = false;
@@ -47,8 +47,11 @@ comecou_diag4= false;
 comecou_diag6= false;
 andando=true;
 pode_criar=false;
+tempo_troca_sala=2;
+diag_acertou=false;
+diag_acertou2=false;
 
-
+global.pedaco_tmachine=0;
 global.escolheu_op_certa=false;
 global.escolheu=false;
 global.controle_cut2=false;

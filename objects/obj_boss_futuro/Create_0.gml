@@ -2,7 +2,7 @@ estado= noone;
 tempo_estado= 500;
 timer_estado= 0;
 exclamacao_altura=1;
-life=1;
+life=30;
 
 tempo_morto=5;
 
@@ -68,7 +68,7 @@ estado_morto= function(){
 	
 	if (image_index>= image_number-1)&& !morreu{ 
 		morreu= true;
-	
+		instance_create_layer(1020, 290, "Instances", obj_tmachine2);
 	}
 
 	if morreu && tempo_morto>0{

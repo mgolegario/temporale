@@ -1,4 +1,4 @@
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, y_scale, 0, c_white, 1);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 0, c_white, 1);
 
 if !global.dialogo_ja_feito{
 if opacidade>0{

@@ -143,7 +143,30 @@ state= player_state_attack;
 	if !dialogo_finalizado_cut4 && distance_to_object(obj_olegario) <=64 {state=player_state_cutscene4;andando=true;}
 	if !dialogo_finalizado_cut6 && distance_to_object(obj_luiz) <=64 {state=player_state_cutscene6;andando=true;}
 
+	if place_meeting(x,y,obj_tmachine){
+		global.pedaco_tmachine=1; 
+	
+		}
+			
+		if global.pedaco_tmachine=1{ 
+		
+			instance_destroy(obj_tmachine);
+			tempo_troca_sala= tempo_troca_sala-delta_time/1000000
+			if tempo_troca_sala<=0{room_goto(rm_futuro);};
+		}
+		
+	if place_meeting(x,y,obj_tmachine2){
 
+		global.pedaco_tmachine=2;
+		
+		}
+		
+	if global.pedaco_tmachine=2{ 
+		
+			instance_destroy(obj_tmachine2);
+			tempo_troca_sala= tempo_troca_sala-delta_time/1000000
+			if tempo_troca_sala<=0{room_goto(rm_cutscene_final);};
+		}
 }
 
 function player_state_dead(){
@@ -177,7 +200,7 @@ function player_state_attack(){
 if image_index>2{
 if (!instance_exists(obj_player_hitbox)){
 
-instance_create_layer(x+(52*(image_xscale/4)),y,layer,obj_player_hitbox);
+instance_create_layer(x+(52*(image_xscale)),y,layer,obj_player_hitbox);
 
 }
 }
@@ -285,7 +308,11 @@ if levantou==false and (image_index>= image_number-1){
 
  
   if dialogo_finalizado_cut1==true{
- 
+	  
+	if global.can_save==false {save_game(1);}
+	if global.can_save==true {save_game(2);}
+	if global.can_save1==true{save_game(3);}
+	
 	state= player_state_free;
 	comecou_diag1=false;
 	
@@ -398,9 +425,13 @@ andando=false;
 		
 	}
 
-state=player_state_free;
-	
-	
+
+	dialogo_finalizado_cut2=true;
+	if global.can_save==false {save_game(1);}
+	if global.can_save==true {save_game(2);}
+	if global.can_save1==true{save_game(3);}
+	state=player_state_free;
+
 
  }
 	
@@ -541,8 +572,12 @@ andando=false;
 	
 		
 	}
-
-state=player_state_free;
+	
+	
+	if global.can_save==false {save_game(1);}
+	if global.can_save==true {save_game(2);}
+	if global.can_save1==true{save_game(3);}
+	state=player_state_free;
 	
 	
 
@@ -624,21 +659,12 @@ andando=false;
  }
  
 if dialogo_finalizado_cut6{
-	if global.can_save=false{save_game(1)};
 	
+	if global.can_save==false {save_game(1);}
+	if global.can_save==true {save_game(2);}
+	if global.can_save1==true{save_game(3);}
+	room_goto(rm_puzzle);
 	
-	if global.can_save=true{save_game(2)};
-	
-	
-	if global.can_save1=true{save_game(3)};
-	
-	
-	
-	
-	
-	
-	
-room_goto(rm_puzzle);
 }
 
  

@@ -21,7 +21,11 @@
   "moments": {
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion": "1.0",
-    "Keyframes": [],
+    "Keyframes": [
+      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
+              "vai_para_tile_screen",
+            ],},},"Disabled":false,"id":"f2c9ca71-f47d-4ea4-993d-ac50d8626719","IsCreationKey":false,"Key":1973.9998,"Length":1.0,"Stretch":false,},
+    ],
   },
   "parent": {
     "name": "Sequences",
@@ -190,7 +194,10 @@
             ],},"modifiers":[],"trackColour":4285067848,"tracks":[],"traits":0,},
       ],"traits":0,},
   ],
-  "visibleRange": null,
+  "visibleRange": {
+    "x": 0.0,
+    "y": 1973.9999,
+  },
   "volume": 1.0,
   "xorigin": 0,
   "yorigin": 0,

@@ -146,6 +146,12 @@ var _obj_menu= instance_exists(obj_menu);
 	
 	if _obj_player==true global.stat_data.save_x = obj_player.x;
 	if _obj_player==true global.stat_data.save_y = obj_player.y;
+	if _obj_player==true global.stat_data.diag1 = obj_player.dialogo_finalizado_cut1;
+	if _obj_player==true global.stat_data.diag2 = obj_player.dialogo_finalizado_cut2;
+	if _obj_player==true global.stat_data.diag4 = obj_player.dialogo_finalizado_cut4;
+	if _obj_player==true global.stat_data.diag6 = obj_player.dialogo_finalizado_cut6;
+	if _obj_player==true global.stat_data.xscale = obj_player.image_xscale;
+	
 	global.stat_data.save_rm = room_get_name(room);
 	
 	global.stat_data.enemy=global.level_data.level_1;
@@ -192,9 +198,15 @@ function load_game(_filenum){
 	obj_save_load.skip_room_saving=true;
 	
 	if instance_exists(obj_player){instance_destroy(obj_player);};
-	with instance_create_depth(global.stat_data.save_x, global.stat_data.save_y, 0, obj_player){
-	x=global.stat_data.save_x;
-	y=global.stat_data.save_y;
+
+	with instance_create_layer(global.stat_data.save_x, global.stat_data.save_y, "Instances", obj_player){
+
+	
+	dialogo_finalizado_cut1=global.stat_data.diag1;
+	dialogo_finalizado_cut2=global.stat_data.diag2;
+	dialogo_finalizado_cut4=global.stat_data.diag4;
+	dialogo_finalizado_cut6=global.stat_data.diag6;
+	
 	
 	}
 	
