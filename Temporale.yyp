@@ -229,6 +229,7 @@
     {"id":{"name":"script_save_load","path":"scripts/script_save_load/script_save_load.yy",},},
     {"id":{"name":"__input_class_trigger_effect_off","path":"scripts/__input_class_trigger_effect_off/__input_class_trigger_effect_off.yy",},},
     {"id":{"name":"spr_tiles","path":"sprites/spr_tiles/spr_tiles.yy",},},
+    {"id":{"name":"fnt_vida","path":"fonts/fnt_vida/fnt_vida.yy",},},
     {"id":{"name":"input_keyboard_check","path":"scripts/input_keyboard_check/input_keyboard_check.yy",},},
     {"id":{"name":"snd_jump","path":"sounds/snd_jump/snd_jump.yy",},},
     {"id":{"name":"__input_steam_type_set","path":"scripts/__input_steam_type_set/__input_steam_type_set.yy",},},

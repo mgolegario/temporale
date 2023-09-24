@@ -195,8 +195,8 @@ switch (menu_level) {
 	switch (pos){
 		
 			case 0: break;
-			case 1: menu_level=6;break;
-		
+			case 1: break;
+			case 2: menu_level=6;break;
 		
 			}
 			
@@ -206,7 +206,9 @@ switch (menu_level) {
 	switch (pos){
 		
 			case 0: break;
-			case 1: menu_level=6;break;
+			case 1: break;
+			case 2: break;
+			case 3: menu_level=11;break;
 		
 		
 			}
@@ -231,6 +233,14 @@ switch (menu_level) {
 			
 			break;
 			
+	case 11:
+		switch(pos){
+		case 0: break;
+		case 1: menu_level=6;break;
+		
+		
+		}
+		break;
 	
 }
 

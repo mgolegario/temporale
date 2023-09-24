@@ -159,7 +159,7 @@ state= player_state_attack;
 			instance_destroy(obj_tmachine);
 			global.pode_salvar=true;
 			tempo_troca_sala= tempo_troca_sala-delta_time/1000000
-			if tempo_troca_sala<=0{x=1024;y=10688;room_goto(rm_futuro);};
+			if tempo_troca_sala<=0 && opacidade==1{x=1024;y=10688;room_goto(rm_futuro);};
 		}
 		
 	if place_meeting(x,y,obj_tmachine2){
@@ -173,7 +173,6 @@ state= player_state_attack;
 			if global.can_save1==false && global.can_save==false {save_game(1);}
 			if global.can_save==true {save_game(2);}
 			if global.can_save1==true && global.can_save==false{save_game(3);}
-			var pode_ir=false;
 			instance_destroy(obj_tmachine2);
 			tempo_troca_sala= tempo_troca_sala-delta_time/1000000;
 			if tempo_troca_sala<=0 {room_goto(rm_cutscene_final);};

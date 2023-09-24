@@ -188,6 +188,7 @@
     {"name":"snd_grama","order":8,"path":"sounds/snd_grama/snd_grama.yy",},
     {"name":"script_save_load","order":4,"path":"scripts/script_save_load/script_save_load.yy",},
     {"name":"__input_class_trigger_effect_off","order":11,"path":"scripts/__input_class_trigger_effect_off/__input_class_trigger_effect_off.yy",},
+    {"name":"fnt_vida","order":2,"path":"fonts/fnt_vida/fnt_vida.yy",},
     {"name":"__input_steam_type_set","order":12,"path":"scripts/__input_steam_type_set/__input_steam_type_set.yy",},
     {"name":"input_binding_get_name","order":3,"path":"scripts/input_binding_get_name/input_binding_get_name.yy",},
     {"name":"cutscene_3","order":7,"path":"sprites/cutscene_3/cutscene_3.yy",},

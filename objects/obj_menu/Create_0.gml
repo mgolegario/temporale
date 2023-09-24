@@ -56,15 +56,23 @@ option[7,3] = "More...";
 
 
 option[8,0] = "Attack:  LMB";
-option[8,1] = "Back";
+option[8,1] = "Dialogue: F";
+option[8,2] = "Back";
 
-option[9,0] = "";
-option[9,1] = "Back";
+option[9,0] = "Move: Analogic or Pad";
+option[9,1] = "Attack: X";
+option[9,2] = "Jump: A";
+option[9,3] = "More...";
+
 
 option[10,0] = "Saved Game 1";
 option[10,1] = "Saved Game 2";
 option[10,2] = "Saved Game 3";
 option[10,3] = "Back";
+
+option[11,0] = "Dialogue: Y";
+option[11,1] = "Back";
+
 
 op_length = 0;
 menu_level = 0;
