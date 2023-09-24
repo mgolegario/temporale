@@ -16,3 +16,4 @@ for (var j=0; j<4; j++){
 }
 
 
+tempo_troca=5;

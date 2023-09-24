@@ -583,7 +583,7 @@ if andando {
 	
 dialogo_finalizado_cut6=false;
 image_speed=0.5;
-hspd=5;
+hspd=-5;
 sprite_index=spr_player_run
 }
 
@@ -624,6 +624,20 @@ andando=false;
  }
  
 if dialogo_finalizado_cut6{
+	if global.can_save=false{save_game(1)};
+	
+	
+	if global.can_save=true{save_game(2)};
+	
+	
+	if global.can_save1=true{save_game(3)};
+	
+	
+	
+	
+	
+	
+	
 room_goto(rm_puzzle);
 }
 
