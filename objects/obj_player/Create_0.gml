@@ -36,17 +36,21 @@ levantou=false;
 parou=false;
 dialogo_finalizado_cut1=false;
 dialogo_finalizado_cut2=false;
+dialogo_finalizado_cut4=false;
 diag_escolha=false;
 
 tempo_morto= 2;
 comecou_diag1= false;
 comecou_diag2= false;
+comecou_diag4= false;
 andando=true;
 pode_criar=false;
+
 
 global.escolheu_op_certa=false;
 global.escolheu=false;
 global.controle_cut2=false;
+global.controle_cut4=false;
 
 
 

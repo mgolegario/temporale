@@ -20,3 +20,9 @@ caixa[0,3]= spr_caixa_doutor_2;
 caixa[0,4]= spr_caixa_sachez_1;
 caixa[0,5]= spr_caixa_sachez_2;
 
+caixa[0,6]= spr_caixa_olegario_1;
+caixa[0,7]= spr_caixa_olegario_2;
+
+caixa[0,8]= spr_caixa_luiz_1;
+caixa[0,9]= spr_caixa_luiz_2;
+

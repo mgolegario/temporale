@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_caixa_olegario_1",
-  "bbox_bottom": 42,
+  "bbox_bottom": 386,
   "bbox_left": 0,
-  "bbox_right": 161,
+  "bbox_right": 1457,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 43,
+  "height": 387,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d4985f97-3e9f-4ef2-8fc8-bdd6921a28a1","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 162,
+  "width": 1458,
 }

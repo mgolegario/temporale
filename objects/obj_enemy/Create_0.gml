@@ -63,6 +63,7 @@ estado_morto= function(){
 	image_speed=1;
 
 
+
 	sprite_index=spr_enemy_death;
 	
 	if (image_index>= image_number-1)&& !morreu{ 

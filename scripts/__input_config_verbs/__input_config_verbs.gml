@@ -25,6 +25,7 @@ return {
         action:  input_binding_key(vk_enter),
         special: input_binding_key(vk_shift),
 		attack:  input_binding_mouse_button(mb_left),
+		diagPass: [input_binding_mouse_button(mb_left),input_binding_key(vk_enter)],
         
         //No aiming verbs since we use the mouse for that (see below for aiming verb examples)
         shoot: input_binding_key(vk_up),

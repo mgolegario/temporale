@@ -140,7 +140,7 @@ state= player_state_attack;
 	if !dialogo_finalizado_cut2 && distance_to_object(obj_sachez) <=500 {state=player_state_cutscene2;}
 	
 
-
+	if !dialogo_finalizado_cut4 && distance_to_object(obj_olegario) <=100 {state=player_state_cutscene4;andando=true;}
 
 
 }
@@ -314,7 +314,7 @@ hspd=5;
 sprite_index=spr_player_run
 }
 
- if andando && distance_to_object(obj_sachez)<=70{
+ if andando && distance_to_object(obj_sachez)<=20{
 	hspd=0;
  	image_speed=0.5;
 	sprite_index= spr_player_idle;
@@ -325,7 +325,7 @@ andando=false;
 
 
  
- if !comecou_diag2 and !dialogo_finalizado_cut2 and input_check_pressed("dialogo") {
+ if !comecou_diag2 and !dialogo_finalizado_cut2 and input_check_pressed("dialogo") and distance_to_object(obj_sachez)<=20{
 	comecou_diag2=true;
 	layer_create(-200,"dialogo");
 	instance_create_layer(x,y, "dialogo",obj_texto);
@@ -378,7 +378,7 @@ andando=false;
 		
 	}
 
- state=player_state_dead;
+ state=player_state_cutscene3;
 
 	
  }
@@ -410,5 +410,166 @@ state=player_state_free;
 	
  }
  
+
+  
+ function player_state_cutscene3(){
+ 
+ with obj_sachez{
+	 
+	 if !bateu{
+		 
+		sprite_index=spr_sachez_hit;
+		image_xscale= -4;
+		bateu=true;
+		
+	    
+	 }  
+	
+	
+	
+ if (image_index>= image_number-1) {
+
+sprite_index=spr_sachez;
+  image_xscale= 4;
+  obj_player.state=player_state_dead
+ }
  
 
+ }
+
+ 
+ }
+ 
+ 
+ function player_state_cutscene4(){
+
+
+ image_speed=0.5;	
+	
+if andando {
+	
+dialogo_finalizado_cut4=false;
+image_speed=0.5;
+hspd=5;
+sprite_index=spr_player_run
+}
+
+ if andando && distance_to_object(obj_olegario)<=20{
+	hspd=0;
+ 	image_speed=0.5;
+	sprite_index= spr_player_idle;
+
+andando=false;
+ }
+
+
+
+ 
+ if !comecou_diag4 and !dialogo_finalizado_cut4 and input_check_pressed("dialogo") and distance_to_object(obj_olegario)<=20{
+	comecou_diag4=true;
+	layer_create(-200,"dialogo");
+	instance_create_layer(x,y, "dialogo",obj_texto);
+
+	with obj_texto{
+	
+	
+		texto=["MAMA MIA!",
+		"O.. oi?",
+		"QUIEN ES TU?",
+		"Meu nome é Adler, prazer.",
+		"MI NOMBRE ES OLEGARIO. COMO TU CHEGOU ARRIBA?",
+		"É uma longa história. Envolve viagem no tempo, inclusive poderia me falar que ano estamos?",
+		"Estamos no ano de 2079. De que ano você veio?",
+		"Eu vim de 2023. Mas peraí você não estava falando em outra língua?",
+		"Ah, é que quando eu me assusto eu falo em qualquer língua estrangeira.",
+		"Então vamos logo para o meu pont-",
+		"Não. Ainda não confio em você. Se quiser continuar vai ter que me responder uma pergunta essencial.",
+		"(De novo isso? Que gente sem criatividade)",
+		"Eu escutei isso hein.",
+		"Vai logo faz a pergunta.",
+		"Qual é o nome do restaurante que você passou em frente lá na calçada?"];
+	
+		
+	}
+
+ }
+ 
+
+ 
+  if pode_criar{
+ 
+	instance_create_depth(x,y,-150, obj_escolhas2)
+	pode_criar=false;
+	
+ }
+
+ 
+ if !global.escolheu_op_certa && global.escolheu {
+	
+	global.escolheu=false;
+	global.controle_cut4=true;
+	
+	
+	layer_create(-200,"dialogo");
+	instance_create_layer(x,y, "dialogo",obj_texto);
+
+	with obj_texto{
+	
+	
+		texto=["Increíble cómo te las arreglaste para equivocarte. Da un empujón para ser inteligente.","Que? NÃOOOOOOOOOOOOOOO!"];
+	
+		
+	}
+
+ state=player_state_cutscene5;
+
+	
+ }
+ 
+ if global.escolheu_op_certa && global.escolheu{
+	
+	global.escolheu=false;
+	global.controle_cut4=true;
+	
+	
+	
+	layer_create(-200,"dialogo");
+	instance_create_layer(x,y, "dialogo",obj_texto);
+
+	with obj_texto{
+	
+	
+		texto=["Você acertou! Inclusive eu sou o dono dela. Tenha uma ótima viagem estranho! ","MEU NOME É ADLER."];
+	
+		
+	}
+
+state=player_state_free;
+	
+	
+
+ }
+ }
+
+function player_state_cutscene5(){
+var _caiu_no_chao=false;
+ if input_check_pressed("diagPass"){
+	 
+		  
+	if x>390 {hspd=-15}
+	 
+ }
+if x<400{hspd=0;}
+ 
+if !(place_meeting(x, y+sign(vspd), obj_wall)) and x<400{
+vspd+=grv; vspd = clamp(vspd, vspd_min, vspd_max);
+
+}
+
+if (place_meeting(x, y+sign(vspd), obj_wall)) and x<400{
+_caiu_no_chao=true;
+}
+if _caiu_no_chao state=player_state_dead;
+
+}
+ 
