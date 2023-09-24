@@ -1,3 +1,4 @@
+if instance_exists(obj_player){
 if obj_player.tempo_morto<=0{
 	
 	layer_create(-100,"transicao");
@@ -15,7 +16,7 @@ if obj_player.tempo_morto<=0{
 	room_goto(rm_game_over);
 	}
 }
-
+}
 	draw_set_color(-1);
 	draw_set_alpha(1);
     	
